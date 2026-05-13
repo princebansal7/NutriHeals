@@ -1,6 +1,6 @@
-# NutriHeal - Premium Clinical Dietitian Website
+# NutriHeals - Premium Clinical Dietitian Website
 
-A premium, modern, and conversion-focused website for NutriHeal, a professional clinical dietitian brand led by Dt. Yogita Bansal.
+A premium, modern, and conversion-focused website for NutriHeals, a professional clinical dietitian brand led by Dt. Yogita Bansal.
 
 ## Features
 

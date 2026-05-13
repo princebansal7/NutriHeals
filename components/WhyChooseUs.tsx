@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
           <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-4">
-            The NutriHeal{' '}
+            The NutriHeals{' '}
             <span className="text-gradient">Difference</span>
           </h2>
           <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
@@ -162,10 +162,10 @@ export default function WhyChooseUs() {
                 </ul>
               </div>
 
-              {/* NutriHeal Approach */}
+              {/* NutriHeals Approach */}
               <div className="p-8 bg-green-50/50">
                 <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
-                  ✅ The NutriHeal Approach
+                  ✅ The NutriHeals Approach
                 </h3>
                 <ul className="space-y-3">
                   {[

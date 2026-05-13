@@ -5,20 +5,20 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
-  title: "NutriHeal - Dt. Yogita Bansal | Clinical Dietitian",
+  title: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",
   description: "Evidence-based nutrition for weight loss, PCOS/PCOD management, and lifestyle disorders. Transform your health with personalized diet plans from expert dietitian.",
   keywords: "dietitian, nutrition, weight loss, PCOS, PCOD, clinical dietitian, healthy eating, diabetes diet, thyroid diet, Pinjore, Haryana",
   authors: [{ name: "Dt. Yogita Bansal" }],
   openGraph: {
-    title: "NutriHeal - Dt. Yogita Bansal | Clinical Dietitian",
+    title: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",
     description: "Evidence-based nutrition for weight loss, PCOS/PCOD management, and lifestyle disorders.",
     type: "website",
     locale: "en_IN",
-    siteName: "NutriHeal",
+    siteName: "NutriHeals",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NutriHeal - Clinical Dietitian",
+    title: "NutriHeals - Clinical Dietitian",
     description: "Transform your health with personalized diet plans",
   },
   robots: {

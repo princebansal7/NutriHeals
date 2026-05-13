@@ -77,7 +77,7 @@ export default function Testimonials() {
             <span className="text-gradient">Happy Clients</span>
           </h2>
           <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
-            Real results from real people who transformed their lives with NutriHeal
+            Real results from real people who transformed their lives with NutriHeals
           </p>
         </motion.div>
 

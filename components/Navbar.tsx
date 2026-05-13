@@ -59,7 +59,7 @@ export default function Navbar() {
               </svg>
             </motion.div>
             <span className="text-2xl font-playfair font-bold text-[var(--primary)]">
-              NutriHeal
+              NutriHeals
             </span>
           </Link>
 
