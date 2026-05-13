@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/NutriHeal' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/NutriHeals' : '',
 };
 
 export default nextConfig;
