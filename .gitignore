@@ -15,7 +15,6 @@
 
 # claude code
 .claude/
-
 # next.js
 /.next/
 /out/
