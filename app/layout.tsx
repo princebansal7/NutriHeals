@@ -15,11 +15,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "NutriHeals",
+    url: "https://www.nutriheals.in",
+    images: [
+      {
+        url: "https://www.nutriheals.in/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "NutriHeals - Clinical Dietitian",
     description: "Transform your health with personalized diet plans",
+    images: ["https://www.nutriheals.in/og-image.svg"],
   },
   robots: {
     index: true,
