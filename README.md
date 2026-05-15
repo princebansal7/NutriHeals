@@ -1,28 +1,43 @@
-# NutriHeals - Premium Clinical Dietitian Website
+# NutriHeals
 
-A premium, modern, and conversion-focused website for NutriHeals, a professional clinical dietitian brand led by Dt. Yogita Bansal.
+**[www.nutriheals.in](https://www.nutriheals.in)**
 
-## Features
+NutriHeals is a professional diet and nutrition consultation platform led by **Dt. Yogita Bansal**, a certified Clinical Dietitian based in Pinjore, Haryana. The platform offers personalised, evidence-based nutrition plans for individuals looking to improve their health through diet.
 
-- **Modern UI/UX**: Glassmorphism, soft gradients, smooth animations
-- **Responsive Design**: Mobile-first, works on all devices
-- **SEO Optimized**: Meta tags, Open Graph, structured data
-- **Fast Performance**: Static export, optimized images
-- **Interactive Elements**: Scroll animations, counters, testimonials carousel
-- **Lead Generation**: Consultation form ready for Supabase integration
-- **WhatsApp Integration**: Floating button for quick connect
+---
 
-## Tech Stack
+## What We Offer
 
-- Next.js 15 (App Router)
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Static Export (GitHub Pages compatible)
+NutriHeals provides customised diet plans for a wide range of health conditions and goals:
 
-## Getting Started
+- **Weight Management** - Sustainable weight loss and healthy weight gain plans
+- **PCOS / PCOD** - Hormonal balance through targeted nutrition
+- **Diabetes** - Blood sugar control via clinical diet planning
+- **Hypertension** - DASH-inspired low-sodium meal plans
+- **Cardiac Health** - Heart-friendly nutrition for cardiovascular wellness
+- **Renal Disease** - Kidney-friendly diet management
+- **Fatty Liver** - Liver health restoration through nutrition
+- **Thyroid Disorders** - Thyroid-balancing diet plans
+- **Cholesterol Management** - Healthy lipid levels through diet
+- **Hormonal Imbalance** - Natural hormone regulation via nutrition
+- **Gut Health** - Managing acidity, GERD, constipation, and bloating
+- **Celiac Disease** - Gluten-free diet plans
 
-### Prerequisites
+Each service page includes a detailed breakdown of the condition, risks of leaving it untreated, how nutrition helps, and an initial 4-week meal plan with daily diet guides, goals, and follow-up checkpoints.
 
-- Node.js 18+
-- npm or yarn
+---
+
+## About Dt. Yogita Bansal
+
+- M.Sc. Dietetics & Nutrition
+- Certified Clinical Dietitian
+- PCOS / PCOD Specialist
+- Based in Pinjore, Haryana
+
+Consultations are available online via video call or WhatsApp, making it easy to get personalised guidance from anywhere.
+
+---
+
+## Contact & Booking
+
+Visit **[www.nutriheals.in](https://www.nutriheals.in)** to book a free consultation or reach out directly on WhatsApp.
