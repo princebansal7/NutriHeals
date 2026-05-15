@@ -2,7 +2,7 @@
 
 **[www.nutriheals.in](https://www.nutriheals.in)**
 
-NutriHeals is a professional diet and nutrition consultation platform led by **Dt. Yogita Bansal**, a certified Clinical Dietitian based in Pinjore, Haryana. The platform offers personalised, evidence-based nutrition plans for individuals looking to improve their health through diet.
+NutriHeals is a professional diet and nutrition consultation platform led by **Dt. Yogita Bansal**, a certified Clinical Dietitian based in Chandigarh. The platform offers personalised, evidence-based nutrition plans for individuals looking to improve their health through diet.
 
 ---
 
@@ -32,7 +32,7 @@ Each service page includes a detailed breakdown of the condition, risks of leavi
 - M.Sc. Dietetics & Nutrition
 - Certified Clinical Dietitian
 - PCOS / PCOD Specialist
-- Based in Pinjore, Haryana
+- Based in Chandigarh
 
 Consultations are available online via video call or WhatsApp, making it easy to get personalised guidance from anywhere.
 
