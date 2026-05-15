@@ -6,10 +6,10 @@ import { useState, useEffect } from 'react';
 const testimonials = [
   {
     name: 'Priya Sharma',
-    location: 'Delhi',
+    location: 'Mohali',
     rating: 5,
     image: '👩',
-    text: 'Lost 15kg in 4 months with Dt. Yogita guidance. The PCOS-friendly diet plan was a game changer!',
+    text: "Lost 15kg in 4 months with Dt. Yogita's guidance. The PCOS-friendly diet plan was a game changer!",
     result: '-15kg in 4 months',
   },
   {
@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     name: 'Riya Gupta',
-    location: 'Noida',
+    location: 'Chandigarh',
     rating: 5,
     image: '👩',
     text: 'Struggled with weight gain for years. Finally found a sustainable approach that actually works!',

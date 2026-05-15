@@ -17,7 +17,7 @@ const faqs = [
   {
     question: 'Is the PCOS diet plan effective?',
     answer:
-      'Yes! Our PCOS/PCOD management program has helped many women regulate their cycles, manage weight, and reduce symptoms. We focus on low glycemic index foods, anti-inflammatory foods, and balanced macronutrients to help hormonal balance.',
+      'Yes! Our PCOS/PCOD management program has helped many women regulate their cycles, manage weight, and reduce symptoms. We focus on low glycemic index foods, anti-inflammatory foods, and balanced macronutrients to support hormonal balance.',
   },
   {
     question: 'Will I need to follow strict meal timings?',

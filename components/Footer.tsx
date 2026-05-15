@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import LogoIcon from './LogoIcon';
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
@@ -11,12 +12,12 @@ const quickLinks = [
 ];
 
 const services = [
-  'Weight Loss',
-  'Weight Gain',
-  'PCOS Management',
-  'Diabetes Care',
-  'Thyroid Care',
-  'Heart Health',
+  'Weight Loss & Weight Gain',
+  'Diabetes Management',
+  'Hypertension',
+  'Cholesterol Management',
+  'Celiac Disease',
+  'Many more..',
 ];
 
 const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) => (
@@ -40,10 +41,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-6 h-6">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                </svg>
+              <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center">
+                <LogoIcon className="w-7 h-7" />
               </div>
               <span className="text-2xl font-playfair font-bold">NutriHeals</span>
             </div>
@@ -89,14 +88,12 @@ export default function Footer() {
           <div>
             <h3 className="font-playfair font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2">
-                <span>📱</span>
+              <li>
                 <a href="tel:+918168233617" className="text-white/70 hover:text-white transition-colors text-sm">
                   +91-8168233617
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <span className="flex-shrink-0">💬</span>
+              <li>
                 <a
                   href="https://wa.me/918168233617"
                   target="_blank"
@@ -106,8 +103,7 @@ export default function Footer() {
                   WhatsApp Us
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <span>📧</span>
+              <li>
                 <a
                   href="mailto:nutriheal.health@gmail.com"
                   className="text-white/70 hover:text-white transition-colors text-sm"
@@ -115,8 +111,7 @@ export default function Footer() {
                   nutriheal.health@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <span>📍</span>
+              <li>
                 <span className="text-white/70 text-sm">Pinjore, Haryana</span>
               </li>
             </ul>

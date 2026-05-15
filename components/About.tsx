@@ -7,7 +7,7 @@ export default function About() {
     { name: 'M.Sc. Dietetics & Nutrition', icon: '🎓' },
     { name: 'Clinical Dietitian', icon: '🏥' },
     { name: 'PCOS/PCOD Specialist', icon: '💪' },
-    { name: '3+ Years Experience', icon: '⭐' },
+    { name: '1.5+ Years Experience', icon: '⭐' },
   ];
 
   const containerVariants = {

@@ -1,46 +1,47 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const dietPlans = [
   {
     category: 'Weight Management',
     items: [
-      { name: 'Weight Loss', icon: '⚖️', description: 'Sustainable fat loss with healthy eating habits' },
-      { name: 'Weight Gain', icon: '💪', description: 'Healthy muscle building and weight gain plans' },
+      { name: 'Weight Loss', icon: '⚖️', description: 'Sustainable fat loss with healthy eating habits', slug: 'weight-loss' },
+      { name: 'Weight Gain', icon: '💪', description: 'Healthy muscle building and weight gain plans', slug: 'weight-gain' },
     ],
   },
   {
     category: 'PCOS / PCOD',
     items: [
-      { name: 'PCOS/PCOD Management', icon: '🌸', description: 'Hormonal balance through targeted nutrition' },
+      { name: 'PCOS/PCOD Management', icon: '🌸', description: 'Hormonal balance through targeted nutrition', slug: 'pcos-pcod' },
     ],
   },
   {
     category: 'Medical Conditions',
     items: [
-      { name: 'Diabetes Management', icon: '🩺', description: 'Blood sugar control through diet planning' },
-      { name: 'Hypertension', icon: '💓', description: 'Blood pressure management diet plans' },
-      { name: 'Cardiac Health', icon: '❤️', description: 'Heart-friendly diet for cardiovascular wellness' },
-      { name: 'Renal Disease', icon: '🫘', description: 'Kidney-friendly diet management' },
-      { name: 'Fatty Liver', icon: '🫁', description: 'Liver health restoration through nutrition' },
-      { name: 'Thyroid Disorders', icon: '🦋', description: 'Thyroid balancing diet plans' },
-      { name: 'Cholesterol Management', icon: '🧬', description: 'Healthy cholesterol levels through diet' },
-      { name: 'Hormonal Imbalance', icon: '⚖️', description: 'Balance hormones naturally through diet' },
+      { name: 'Diabetes Management', icon: '🩺', description: 'Blood sugar control through diet planning', slug: 'diabetes' },
+      { name: 'Hypertension', icon: '💓', description: 'Blood pressure management diet plans', slug: 'hypertension' },
+      { name: 'Cardiac Health', icon: '❤️', description: 'Heart-friendly diet for cardiovascular wellness', slug: 'cardiac-health' },
+      { name: 'Renal Disease', icon: '🫘', description: 'Kidney-friendly diet management', slug: 'renal-disease' },
+      { name: 'Fatty Liver', icon: '🫁', description: 'Liver health restoration through nutrition', slug: 'fatty-liver' },
+      { name: 'Thyroid Disorders', icon: '🦋', description: 'Thyroid balancing diet plans', slug: 'thyroid-disorders' },
+      { name: 'Cholesterol Management', icon: '🧬', description: 'Healthy cholesterol levels through diet', slug: 'cholesterol' },
+      { name: 'Hormonal Imbalance', icon: '⚖️', description: 'Balance hormones naturally through diet', slug: 'hormonal-imbalance' },
     ],
   },
   {
     category: 'Gastrointestinal',
     items: [
-      { name: 'Acidity & GERD', icon: '🔥', description: 'Acid reflux management through diet' },
-      { name: 'Constipation', icon: '🚽', description: 'Fiber-rich diet for healthy digestion' },
-      { name: 'Bloating', icon: '🎈', description: 'Reduce bloating with proper nutrition' },
+      { name: 'Acidity & GERD', icon: '🔥', description: 'Acid reflux management through diet', slug: 'acidity-gerd' },
+      { name: 'Constipation', icon: '🚽', description: 'Fibre-rich diet for healthy digestion', slug: 'constipation' },
+      { name: 'Bloating', icon: '🎈', description: 'Reduce bloating with proper nutrition', slug: 'bloating' },
     ],
   },
   {
     category: 'Specialized',
     items: [
-      { name: 'Celiac Disease', icon: '🌾', description: 'Gluten-free diet plans for celiac patients' },
+      { name: 'Celiac Disease', icon: '🌾', description: 'Gluten-free diet plans for celiac patients', slug: 'celiac-disease' },
     ],
   },
 ];
@@ -122,12 +123,23 @@ export default function DietPlans() {
                   </div>
                 </div>
 
-                <button
-                  onClick={scrollToContact}
-                  className="w-full mt-4 py-2 text-sm font-medium text-[var(--primary)] border border-[var(--primary)]/30 rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all duration-300"
-                >
-                  Get Plan →
-                </button>
+                <div className="flex gap-2 mt-4">
+                  {plan.slug ? (
+                    <Link
+                      href={`/services/${plan.slug}`}
+                      className="flex-1 py-2 text-sm font-medium text-center text-[var(--primary)] border border-[var(--primary)]/30 rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all duration-300"
+                    >
+                      Learn More →
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={scrollToContact}
+                      className="flex-1 py-2 text-sm font-medium text-[var(--primary)] border border-[var(--primary)]/30 rounded-lg hover:bg-[var(--primary)] hover:text-white transition-all duration-300"
+                    >
+                      Get Plan →
+                    </button>
+                  )}
+                </div>
               </motion.div>
             ))
           )}

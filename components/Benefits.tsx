@@ -35,7 +35,7 @@ const benefits = [
   {
     icon: '🛡️',
     title: 'Improved Immunity',
-    description: 'Strengthen your body natural defenses',
+    description: "Strengthen your body's natural defences",
     stat: 90,
     suffix: '%',
   },

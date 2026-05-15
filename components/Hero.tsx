@@ -113,7 +113,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-lg sm:text-xl text-[var(--text-secondary)] mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Personalized diet plans for weight loss, PCOS/PCOD, diabetes & more — crafted by{' '}
+              Personalized diet plans for weight loss, PCOS/PCOD, diabetes & more - crafted by{' '}
               <strong className="text-[var(--primary)]">Dt. Yogita Bansal</strong>, Clinical Dietitian.
             </motion.p>
 
@@ -150,12 +150,12 @@ export default function Hero() {
               className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-6"
             >
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-playfair font-bold text-[var(--primary)]">3+</span>
+                <span className="text-3xl font-playfair font-bold text-[var(--primary)]">1.5+</span>
                 <span className="text-sm text-[var(--text-muted)]">Years<br />Experience</span>
               </div>
               <div className="w-px h-12 bg-[var(--text-muted)]/30" />
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-playfair font-bold text-[var(--primary)]">5000+</span>
+                <span className="text-3xl font-playfair font-bold text-[var(--primary)]">500+</span>
                 <span className="text-sm text-[var(--text-muted)]">Happy<br />Clients</span>
               </div>
               <div className="w-px h-12 bg-[var(--text-muted)]/30" />

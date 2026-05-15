@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Background circle -->
-  <circle cx="16" cy="16" r="16" fill="#2D5A3D"/>
-  <!-- Letter N -->
-  <text
-    x="16"
-    y="22"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="17"
-    font-weight="bold"
-    fill="white"
-    text-anchor="middle"
-    letter-spacing="-0.5"
-  >N</text>
-  <!-- Small leaf accent top-right -->
-  <path d="M23 6 C25 4 28 5 27 8 C26 11 23 10 22 9 C21 8 21 8 23 6Z" fill="#8FBC8F"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+  <circle cx="110" cy="110" r="110" fill="white"/>
+  <path d="M 16 150 C 8 62 76 12 172 32" stroke="#154E38" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M 32 144 C 28 80 82 38 148 44" stroke="#154E38" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="96" y="38" width="16" height="42" rx="1" fill="#B58A33"/>
+  <rect x="83" y="51" width="42" height="16" rx="1" fill="#B58A33"/>
+  <path d="M 48 118 A 70 80 0 0 1 118 198 A 70 80 0 0 1 188 118 Z" fill="#154E38"/>
+  <ellipse cx="118" cy="118" rx="72" ry="14" fill="white"/>
+  <ellipse cx="118" cy="123" rx="56" ry="10" fill="#154E38"/>
+  <line x1="162" y1="46" x2="150" y2="108" stroke="#154E38" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="166" cy="40" r="13" fill="#154E38"/>
+  <path d="M 76 168 C 54 148 56 114 80 94 C 94 80 114 88 120 110 C 126 132 114 160 96 170 C 88 174 80 172 76 168 Z" fill="#7BAA3A" transform="rotate(-14 96 132)"/>
+  <path d="M 96 166 C 90 136 84 110 78 92" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75" transform="rotate(-14 96 132)"/>
+  <path d="M 120 168 C 108 148 112 118 126 98 C 140 80 162 88 166 112 C 170 134 158 162 140 172 C 132 176 122 174 120 168 Z" fill="#9BBB3E" transform="rotate(12 138 132)"/>
+  <path d="M 140 168 C 140 140 140 116 142 100" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.75" transform="rotate(12 138 132)"/>
+  <path d="M 28 174 C 72 208 152 208 198 172" stroke="#154E38" stroke-width="8" fill="none" stroke-linecap="round"/>
 </svg>

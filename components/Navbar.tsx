@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import LogoIcon from './LogoIcon';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -46,17 +47,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-2">
             <motion.div
-              whileHover={{ rotate: 10 }}
-              className="w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center"
+              whileHover={{ rotate: 8 }}
+              className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="white"
-                className="w-6 h-6"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-              </svg>
+              <LogoIcon className="w-7 h-7" />
             </motion.div>
             <span className="text-2xl font-playfair font-bold text-[var(--primary)]">
               NutriHeals
