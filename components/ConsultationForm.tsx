@@ -169,7 +169,7 @@ export default function ConsultationForm() {
                 </div>
                 <div>
                   <p className="font-medium text-[var(--text-primary)]">Location</p>
-                  <p className="text-sm text-[var(--text-muted)]">Pinjore, Haryana</p>
+                  <p className="text-sm text-[var(--text-muted)]">Chandigarh</p>
                 </div>
               </div>
             </div>

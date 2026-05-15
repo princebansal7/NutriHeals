@@ -112,7 +112,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-white/70 text-sm">Pinjore, Haryana</span>
+                <span className="text-white/70 text-sm">Chandigarh</span>
               </li>
             </ul>
 

@@ -96,7 +96,7 @@ export default function Hero() {
                 Registered Dietitian
               </span>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--primary)]/10 rounded-full text-sm text-[var(--primary)] font-medium">
-                📍 Pinjore, Haryana
+                📍 Chandigarh
               </span>
             </motion.div>
 

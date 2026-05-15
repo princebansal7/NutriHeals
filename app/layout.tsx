@@ -7,7 +7,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 export const metadata: Metadata = {
   title: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",
   description: "Evidence-based nutrition for weight loss, PCOS/PCOD management, and lifestyle disorders. Transform your health with personalized diet plans from expert dietitian.",
-  keywords: "dietitian, nutrition, weight loss, PCOS, PCOD, clinical dietitian, healthy eating, diabetes diet, thyroid diet, Pinjore, Haryana",
+  keywords: "dietitian, nutrition, weight loss, PCOS, PCOD, clinical dietitian, healthy eating, diabetes diet, thyroid diet, Chandigarh",
   authors: [{ name: "Dt. Yogita Bansal" }],
   openGraph: {
     title: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",

@@ -80,7 +80,7 @@ export default function About() {
 
             <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Hello! I am <strong className="text-[var(--text-primary)]">Dt. Yogita Bansal</strong>, a certified Clinical Dietitian based in Pinjore, Haryana, dedicated to helping individuals achieve their health goals through personalized, evidence-based nutrition plans.
+                Hello! I am <strong className="text-[var(--text-primary)]">Dt. Yogita Bansal</strong>, a certified Clinical Dietitian based in Chandigarh, dedicated to helping individuals achieve their health goals through personalized, evidence-based nutrition plans.
               </p>
               <p>
                 My approach combines <strong className="text-[var(--text-primary)]">scientific research</strong> with practical lifestyle modifications. I believe in creating sustainable habits rather than imposing restrictions. Every individual is unique, and so is their path to wellness.
