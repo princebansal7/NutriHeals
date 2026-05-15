@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import LogoIcon from './LogoIcon';
 
 const navLinks = [
@@ -16,6 +17,8 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,11 +29,15 @@ export default function Navbar() {
   }, []);
 
   const scrollToSection = (href: string) => {
+    setIsMobileMenuOpen(false);
+    if (pathname !== '/') {
+      router.push(`/${href}`);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -45,7 +52,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-2">
+          <Link href={pathname === '/' ? '#home' : '/'} className="flex items-center gap-2">
             <motion.div
               whileHover={{ rotate: 8 }}
               className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"
