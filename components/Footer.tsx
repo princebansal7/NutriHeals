@@ -105,10 +105,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:nutriheal.health@gmail.com"
+                  href="mailto:contact@nutriheals.in"
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
-                  nutriheal.health@gmail.com
+                  contact@nutriheals.in
                 </a>
               </li>
               <li>

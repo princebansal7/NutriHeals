@@ -159,7 +159,7 @@ export default function ConsultationForm() {
                 </div>
                 <div>
                   <p className="font-medium text-[var(--text-primary)]">Email</p>
-                  <a href="mailto:nutriheal.health@gmail.com" className="text-sm text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors">nutriheal.health@gmail.com</a>
+                  <a href="mailto:contact@nutriheals.in" className="text-sm text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors">contact@nutriheals.in</a>
                 </div>
               </div>
 
