@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { ServiceData } from '@/lib/services-data';
+import { WA_URL } from '@/lib/contact';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -202,7 +203,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
                 Book a Consultation
               </button>
               <a
-                href="https://wa.me/918168233617"
+                href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"

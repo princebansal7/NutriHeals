@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { WA_URL } from '@/lib/contact';
 
 const faqs = [
   {
@@ -124,7 +125,7 @@ export default function FAQ() {
             Still have questions?
           </p>
           <a
-            href="https://wa.me/918168233617"
+            href={WA_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2"

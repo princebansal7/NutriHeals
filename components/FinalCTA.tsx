@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { WA_URL } from '@/lib/contact';
 
 const WhatsAppIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +59,7 @@ export default function FinalCTA() {
               Book Appointment
             </motion.button>
             <a
-              href="https://wa.me/918168233617"
+              href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-btn px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition-all duration-300"

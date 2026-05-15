@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { WA_URL } from '@/lib/contact';
 
 const WhatsAppIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -148,8 +149,8 @@ export default function ConsultationForm() {
                   📱
                 </div>
                 <div>
-                  <p className="font-medium text-[var(--text-primary)]">WhatsApp / Call</p>
-                  <a href="https://wa.me/918168233617" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors">+91-8168233617</a>
+                  <p className="font-medium text-[var(--text-primary)]">WhatsApp</p>
+                  <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors">Connect on WhatsApp</a>
                 </div>
               </div>
 
@@ -395,7 +396,7 @@ export default function ConsultationForm() {
 
                 {/* WhatsApp Quick Connect */}
                 <a
-                  href="https://wa.me/918168233617"
+                  href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-btn w-full py-4 text-lg flex items-center justify-center gap-2 rounded-full"

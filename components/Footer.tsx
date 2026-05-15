@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import LogoIcon from './LogoIcon';
+import { WA_URL } from '@/lib/contact';
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
@@ -89,13 +90,8 @@ export default function Footer() {
             <h3 className="font-playfair font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+918168233617" className="text-white/70 hover:text-white transition-colors text-sm">
-                  +91-8168233617
-                </a>
-              </li>
-              <li>
                 <a
-                  href="https://wa.me/918168233617"
+                  href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors text-sm"
@@ -132,7 +128,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://wa.me/918168233617"
+                  href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-[#25D366]/20 flex items-center justify-center hover:bg-[#25D366]/40 transition-colors"

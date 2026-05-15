@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, type Variants } from 'framer-motion';
+import { WA_URL } from '@/lib/contact';
 
 const WHATSAPP_SVG = (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +135,7 @@ export default function Hero() {
                 View Diet Plans
               </button>
               <a
-                href="https://wa.me/918168233617"
+                href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-btn text-lg px-8 py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300"

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { WA_URL } from '@/lib/contact';
 
 export default function WhatsAppButton() {
   return (
@@ -8,7 +9,7 @@ export default function WhatsAppButton() {
       {/* Pulse rings */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping" />
       <motion.a
-        href="https://wa.me/918168233617"
+        href={WA_URL}
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0 }}
