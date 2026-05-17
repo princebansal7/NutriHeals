@@ -13,12 +13,12 @@ const faqs = [
   {
     question: 'How long does it take to see results?',
     answer:
-      'Results vary depending on your health condition and goals. Generally, clients start noticing positive changes within 2-4 weeks. For sustainable weight loss, we recommend following the plan for at least 3 months for lasting results. PCOS management typically shows improvements in 3-6 months.',
+      'Results vary depending on your health condition and goals. Generally, clients start noticing positive changes within 2-4 weeks. For sustainable weight loss, we recommend following the plan for at least 3 months for lasting results. PMOS management typically shows improvements in 3-6 months.',
   },
   {
-    question: 'Is the PCOS diet plan effective?',
+    question: 'Is the PMOS diet plan effective?',
     answer:
-      'Yes! Our PCOS/PCOD management program has helped many women regulate their cycles, manage weight, and reduce symptoms. We focus on low glycemic index foods, anti-inflammatory foods, and balanced macronutrients to support hormonal balance.',
+      'Yes! Our PMOS (formerly PCOS/PCOD) management program has helped many women regulate their cycles, manage weight, and reduce symptoms. We focus on low glycemic index foods, anti-inflammatory foods, and balanced macronutrients to support hormonal balance.',
   },
   {
     question: 'Will I need to follow strict meal timings?',
@@ -45,7 +45,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-20 bg-[var(--surface)]">
+    <section className="py-20 bg-surface">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -55,14 +55,14 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[var(--primary)] font-medium uppercase tracking-wider text-sm">
+          <span className="text-primary font-medium uppercase tracking-wider text-sm">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-text-primary mt-2 mb-4">
             Frequently Asked{' '}
             <span className="text-gradient">Questions</span>
           </h2>
-          <p className="text-[var(--text-secondary)]">
+          <p className="text-text-secondary">
             Find answers to common questions about our services
           </p>
         </motion.div>
@@ -83,13 +83,13 @@ export default function FAQ() {
                 className="w-full px-6 py-5 flex items-center justify-between text-left"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-playfair font-semibold text-[var(--text-primary)]">
+                <span className="font-playfair font-semibold text-text-primary">
                   {faq.question}
                 </span>
                 <motion.span
                   animate={{ rotate: openIndex === index ? 45 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="w-8 h-8 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] font-bold"
+                  className="w-8 h-8 rounded-full bg-(--primary)/10 flex items-center justify-center text-primary font-bold"
                 >
                   +
                 </motion.span>
@@ -103,7 +103,7 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-6 text-[var(--text-secondary)]">
+                    <div className="px-6 pb-6 text-text-secondary">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -121,7 +121,7 @@ export default function FAQ() {
           transition={{ delay: 0.3 }}
           className="text-center mt-12"
         >
-          <p className="text-[var(--text-secondary)] mb-4">
+          <p className="text-text-secondary mb-4">
             Still have questions?
           </p>
           <a

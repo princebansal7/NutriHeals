@@ -17,16 +17,16 @@ export default function FinalCTA() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[var(--primary)]">
+      <div className="absolute inset-0 bg-primary">
         <motion.div
           animate={{ scale: [1, 1.2, 1], rotate: [0, 5, 0] }}
           transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--primary-light)]/30 rounded-full blur-3xl"
+          className="absolute top-0 right-0 w-150 h-150 bg-(--primary-light)/30 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ scale: [1, 1.3, 1], rotate: [0, -5, 0] }}
           transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[var(--accent)]/20 rounded-full blur-3xl"
+          className="absolute bottom-0 left-0 w-125 h-125 bg-(--accent)/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -43,7 +43,7 @@ export default function FinalCTA() {
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-bold text-white mb-6">
             Ready to Transform Your{' '}
-            <span className="text-[var(--accent)]">Health?</span>
+            <span className="text-accent">Health?</span>
           </h2>
           <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10">
             Book a consultation with Dt. Yogita Bansal and get a personalized nutrition plan tailored to your health goals.
@@ -54,7 +54,7 @@ export default function FinalCTA() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="px-8 py-4 bg-white text-[var(--primary)] rounded-full font-semibold text-lg hover:shadow-xl transition-all"
+              className="px-8 py-4 bg-white text-primary rounded-full font-semibold text-lg hover:shadow-xl transition-all"
             >
               Book Appointment
             </motion.button>

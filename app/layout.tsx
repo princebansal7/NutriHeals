@@ -6,12 +6,12 @@ import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
   title: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",
-  description: "Evidence-based nutrition for weight loss, PCOS/PCOD management, and lifestyle disorders. Transform your health with personalized diet plans from expert dietitian.",
-  keywords: "dietitian, nutrition, weight loss, PCOS, PCOD, clinical dietitian, healthy eating, diabetes diet, thyroid diet, Chandigarh",
+  description: "Evidence-based nutrition for weight loss, PMOS (formerly PCOS/PCOD) management, and lifestyle disorders. Transform your health with personalized diet plans from expert dietitian.",
+  keywords: "dietitian, nutrition, weight loss, PMOS, PCOS, PCOD, clinical dietitian, healthy eating, diabetes diet, thyroid diet, Chandigarh",
   authors: [{ name: "Dt. Yogita Bansal" }],
   openGraph: {
     title: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",
-    description: "Evidence-based nutrition for weight loss, PCOS/PCOD management, and lifestyle disorders.",
+    description: "Evidence-based nutrition for weight loss, PMOS (formerly PCOS/PCOD) management, and lifestyle disorders.",
     type: "website",
     locale: "en_IN",
     siteName: "NutriHeals",
@@ -47,7 +47,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <ScrollProgress />
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="grow">{children}</main>
         <WhatsAppButton />
       </body>
     </html>

@@ -19,7 +19,7 @@ const stagger = {
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <span className="text-[var(--primary)] font-medium uppercase tracking-wider text-sm">
+    <span className="text-primary font-medium uppercase tracking-wider text-sm">
       {children}
     </span>
   );
@@ -27,7 +27,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-4">
+    <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-text-primary mt-2 mb-4">
       {children}
     </h2>
   );
@@ -53,22 +53,22 @@ function WeekAccordion({ week, defaultOpen }: { week: ServiceData['monthPlan'][0
     <div className="glass-card rounded-2xl overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-6 text-left hover:bg-[var(--gradient-start)] transition-colors"
+        className="w-full flex items-center justify-between p-6 text-left hover:bg-(--gradient-start) transition-colors"
       >
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-[var(--primary)] text-white flex items-center justify-center font-playfair font-bold text-lg">
+          <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center font-playfair font-bold text-lg">
             W{week.weekNumber}
           </div>
           <div>
-            <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide">
+            <p className="text-xs text-text-muted uppercase tracking-wide">
               Week {week.weekNumber}
             </p>
-            <p className="font-playfair font-semibold text-[var(--text-primary)]">
+            <p className="font-playfair font-semibold text-text-primary">
               {week.theme}
             </p>
           </div>
         </div>
-        <span className="text-[var(--primary)] text-xl">{open ? '−' : '+'}</span>
+        <span className="text-primary text-xl">{open ? '−' : '+'}</span>
       </button>
 
       <AnimatePresence initial={false}>
@@ -83,11 +83,11 @@ function WeekAccordion({ week, defaultOpen }: { week: ServiceData['monthPlan'][0
             <div className="px-6 pb-6 space-y-6">
               {/* Goals */}
               <div>
-                <h4 className="font-semibold text-[var(--text-primary)] mb-3">🎯 Weekly Goals</h4>
+                <h4 className="font-semibold text-text-primary mb-3">🎯 Weekly Goals</h4>
                 <ul className="space-y-2">
                   {week.goals.map((g, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                      <span className="text-[var(--primary)] mt-0.5">✓</span>
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <span className="text-primary mt-0.5">✓</span>
                       {g}
                     </li>
                   ))}
@@ -96,14 +96,14 @@ function WeekAccordion({ week, defaultOpen }: { week: ServiceData['monthPlan'][0
 
               {/* Daily Diet Guide */}
               <div>
-                <h4 className="font-semibold text-[var(--text-primary)] mb-3">🍽️ Sample Daily Diet Guide</h4>
+                <h4 className="font-semibold text-text-primary mb-3">🍽️ Sample Daily Diet Guide</h4>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {meals.map((meal) => (
-                    <div key={meal.label} className="bg-[var(--gradient-start)] rounded-xl p-3">
-                      <p className="text-xs font-semibold text-[var(--primary)] uppercase tracking-wide mb-1">
+                    <div key={meal.label} className="bg-(--gradient-start) rounded-xl p-3">
+                      <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
                         {meal.label}
                       </p>
-                      <p className="text-sm text-[var(--text-secondary)]">{meal.value}</p>
+                      <p className="text-sm text-text-secondary">{meal.value}</p>
                     </div>
                   ))}
                 </div>
@@ -135,10 +135,10 @@ function WeekAccordion({ week, defaultOpen }: { week: ServiceData['monthPlan'][0
 
               {/* Follow-up */}
               <div>
-                <h4 className="font-semibold text-[var(--text-primary)] mb-3">📋 Follow-up Tasks</h4>
+                <h4 className="font-semibold text-text-primary mb-3">📋 Follow-up Tasks</h4>
                 <ul className="space-y-2">
                   {week.followUp.map((f, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
                       <span className="text-amber-500 mt-0.5">◆</span>
                       {f}
                     </li>
@@ -166,7 +166,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
   };
 
   return (
-    <div className="min-h-screen bg-[var(--background)]">
+    <div className="min-h-screen bg-background">
       {/* ── Hero ── */}
       <section className="pt-32 pb-16 gradient-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,7 +174,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
             <motion.div variants={fadeUp}>
               <button
                 onClick={goBack}
-                className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:underline mb-6"
+                className="inline-flex items-center gap-2 text-sm text-primary hover:underline mb-6"
               >
                 ← Back to all services
               </button>
@@ -184,17 +184,17 @@ export default function ServicePageClient({ service }: { service: ServiceData })
               <span className="text-5xl">{service.icon}</span>
               <div>
                 <SectionLabel>{service.category}</SectionLabel>
-                <h1 className="text-4xl sm:text-5xl font-playfair font-bold text-[var(--text-primary)]">
+                <h1 className="text-4xl sm:text-5xl font-playfair font-bold text-text-primary">
                   {service.name}
                 </h1>
               </div>
             </motion.div>
 
-            <motion.p variants={fadeUp} className="text-xl text-[var(--primary)] font-medium italic mb-4">
+            <motion.p variants={fadeUp} className="text-xl text-primary font-medium italic mb-4">
               &ldquo;{service.tagline}&rdquo;
             </motion.p>
 
-            <motion.p variants={fadeUp} className="text-[var(--text-secondary)] text-lg max-w-3xl mb-8">
+            <motion.p variants={fadeUp} className="text-text-secondary text-lg max-w-3xl mb-8">
               {service.heroDescription}
             </motion.p>
 
@@ -216,7 +216,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
       </section>
 
       {/* ── What is this condition ── */}
-      <section className="py-16 bg-[var(--background)]">
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-10">
@@ -224,23 +224,23 @@ export default function ServicePageClient({ service }: { service: ServiceData })
               <SectionHeading>What is <span className="text-gradient">{service.name}</span>?</SectionHeading>
             </motion.div>
 
-            <motion.p variants={fadeUp} className="text-[var(--text-secondary)] text-lg mb-8 text-center max-w-3xl mx-auto">
+            <motion.p variants={fadeUp} className="text-text-secondary text-lg mb-8 text-center max-w-3xl mx-auto">
               {service.condition.overview}
             </motion.p>
 
-            <motion.p variants={fadeUp} className="text-sm text-[var(--text-muted)] italic mb-10 text-center">
+            <motion.p variants={fadeUp} className="text-sm text-text-muted italic mb-10 text-center">
               {service.condition.whoAffected}
             </motion.p>
 
             <div className="grid sm:grid-cols-2 gap-6">
               <motion.div variants={fadeUp} className="glass-card rounded-2xl p-6">
-                <h3 className="font-playfair font-semibold text-[var(--text-primary)] text-lg mb-4">
+                <h3 className="font-playfair font-semibold text-text-primary text-lg mb-4">
                   🔍 Common Symptoms
                 </h3>
                 <ul className="space-y-2">
                   {service.condition.symptoms.map((s, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                      <span className="text-[var(--primary)] mt-0.5">•</span>
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <span className="text-primary mt-0.5">•</span>
                       {s}
                     </li>
                   ))}
@@ -248,13 +248,13 @@ export default function ServicePageClient({ service }: { service: ServiceData })
               </motion.div>
 
               <motion.div variants={fadeUp} className="glass-card rounded-2xl p-6">
-                <h3 className="font-playfair font-semibold text-[var(--text-primary)] text-lg mb-4">
+                <h3 className="font-playfair font-semibold text-text-primary text-lg mb-4">
                   🧬 Root Causes
                 </h3>
                 <ul className="space-y-2">
                   {service.condition.causes.map((c, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                      <span className="text-[var(--primary)] mt-0.5">•</span>
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <span className="text-primary mt-0.5">•</span>
                       {c}
                     </li>
                   ))}
@@ -272,7 +272,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
             <motion.div variants={fadeUp} className="text-center mb-10">
               <SectionLabel>Why act now</SectionLabel>
               <SectionHeading>Risks of leaving it <span className="text-gradient">untreated</span></SectionHeading>
-              <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">{service.harms.overview}</p>
+              <p className="text-text-secondary max-w-2xl mx-auto">{service.harms.overview}</p>
             </motion.div>
 
             <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -283,8 +283,8 @@ export default function ServicePageClient({ service }: { service: ServiceData })
                   className="glass-card rounded-2xl p-5"
                 >
                   <div className="text-3xl mb-3">{risk.icon}</div>
-                  <h3 className="font-playfair font-semibold text-[var(--text-primary)] mb-2">{risk.title}</h3>
-                  <p className="text-sm text-[var(--text-secondary)]">{risk.description}</p>
+                  <h3 className="font-playfair font-semibold text-text-primary mb-2">{risk.title}</h3>
+                  <p className="text-sm text-text-secondary">{risk.description}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -293,13 +293,13 @@ export default function ServicePageClient({ service }: { service: ServiceData })
       </section>
 
       {/* ── Nutrition Benefits ── */}
-      <section className="py-16 bg-[var(--background)]">
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-10">
               <SectionLabel>The nutrition advantage</SectionLabel>
               <SectionHeading>How the right diet <span className="text-gradient">heals</span></SectionHeading>
-              <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">{service.nutritionBenefits.overview}</p>
+              <p className="text-text-secondary max-w-2xl mx-auto">{service.nutritionBenefits.overview}</p>
             </motion.div>
 
             <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -307,11 +307,11 @@ export default function ServicePageClient({ service }: { service: ServiceData })
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                  className="glass-card rounded-2xl p-5 border border-[var(--primary)]/10"
+                  className="glass-card rounded-2xl p-5 border border-(--primary)/10"
                 >
                   <div className="text-3xl mb-3">{b.icon}</div>
-                  <h3 className="font-playfair font-semibold text-[var(--text-primary)] mb-2">{b.title}</h3>
-                  <p className="text-sm text-[var(--text-secondary)]">{b.description}</p>
+                  <h3 className="font-playfair font-semibold text-text-primary mb-2">{b.title}</h3>
+                  <p className="text-sm text-text-secondary">{b.description}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -326,9 +326,12 @@ export default function ServicePageClient({ service }: { service: ServiceData })
             <motion.div variants={fadeUp} className="text-center mb-10">
               <SectionLabel>Your roadmap</SectionLabel>
               <SectionHeading>Initial <span className="text-gradient">1-Month Plan</span></SectionHeading>
-              <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              <p className="text-text-secondary max-w-2xl mx-auto">
                 A week-by-week structured guide including daily meal plans, goals, and follow-up checkpoints personalised for {service.name}.
               </p>
+              <div className="mt-6 mx-auto max-w-2xl bg-amber-50 border border-amber-200 rounded-2xl px-6 py-4 text-sm text-amber-800 text-left">
+                <span className="font-semibold">⚠ Please note:</span> This is a sample high-level overview only. Your actual diet plan will be fully customised based on your individual health profile, medical history, body composition, lifestyle, and other personal factors during your consultation.
+              </div>
             </motion.div>
 
             <motion.div variants={stagger} className="space-y-4">
@@ -343,7 +346,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="py-16 bg-[var(--primary)]">
+      <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-playfair font-bold text-white mb-4">
@@ -355,7 +358,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 justify-center">
               <button
                 onClick={scrollToContact}
-                className="px-8 py-3 bg-white text-[var(--primary)] font-semibold rounded-full hover:bg-white/90 transition-colors"
+                className="px-8 py-3 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition-colors"
               >
                 Book a Free Consultation
               </button>

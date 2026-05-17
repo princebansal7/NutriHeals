@@ -76,14 +76,14 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[var(--primary)] font-medium uppercase tracking-wider text-sm">
+          <span className="text-primary font-medium uppercase tracking-wider text-sm">
             Why Choose Us
           </span>
-          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-text-primary mt-2 mb-4">
             The NutriHeals{' '}
             <span className="text-gradient">Difference</span>
           </h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+          <p className="text-text-secondary max-w-2xl mx-auto">
             We go beyond typical diet plans to create lasting transformation
           </p>
         </motion.div>
@@ -105,15 +105,15 @@ export default function WhyChooseUs() {
             >
               <motion.div
                 whileHover={{ rotate: 10, scale: 1.1 }}
-                className="w-14 h-14 rounded-xl bg-[var(--primary)]/10 flex items-center justify-center text-2xl flex-shrink-0"
+                className="w-14 h-14 rounded-xl bg-(--primary)/10 flex items-center justify-center text-2xl flex-shrink-0"
               >
                 {feature.icon}
               </motion.div>
               <div>
-                <h3 className="text-lg font-playfair font-semibold text-[var(--text-primary)]">
+                <h3 className="text-lg font-playfair font-semibold text-text-primary">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-[var(--text-muted)] mt-1">
+                <p className="text-sm text-text-muted mt-1">
                   {feature.description}
                 </p>
               </div>
@@ -122,7 +122,7 @@ export default function WhyChooseUs() {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className="w-6 h-6 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-sm ml-auto"
+                className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-sm ml-auto"
               >
                 ✓
               </motion.div>
@@ -154,7 +154,7 @@ export default function WhyChooseUs() {
                     'One-size-fits-all approach',
                     'No professional guidance',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-muted">
                       <span className="text-red-500">×</span>
                       {item}
                     </li>
@@ -164,7 +164,7 @@ export default function WhyChooseUs() {
 
               {/* NutriHeals Approach */}
               <div className="p-8 bg-green-50/50">
-                <h3 className="text-lg font-semibold text-[var(--primary)] mb-4">
+                <h3 className="text-lg font-semibold text-primary mb-4">
                   ✅ The NutriHeals Approach
                 </h3>
                 <ul className="space-y-3">
@@ -176,8 +176,8 @@ export default function WhyChooseUs() {
                     'Personalized to your body type',
                     'Expert dietitian guidance',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                      <span className="text-[var(--primary)]">✓</span>
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <span className="text-primary">✓</span>
                       {item}
                     </li>
                   ))}

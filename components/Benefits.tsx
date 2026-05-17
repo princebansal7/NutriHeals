@@ -101,7 +101,7 @@ export default function Benefits() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-20 bg-[var(--surface)]">
+    <section className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -111,14 +111,14 @@ export default function Benefits() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[var(--primary)] font-medium uppercase tracking-wider text-sm">
+          <span className="text-primary font-medium uppercase tracking-wider text-sm">
             Benefits
           </span>
-          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-text-primary mt-2 mb-4">
             Transform Your Health with{' '}
             <span className="text-gradient">Proven Results</span>
           </h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+          <p className="text-text-secondary max-w-2xl mx-auto">
             Experience the life-changing benefits of personalized nutrition guidance
           </p>
         </motion.div>
@@ -136,13 +136,13 @@ export default function Benefits() {
               className="glass-card p-6 rounded-2xl text-center group"
             >
               <div className="text-4xl mb-4">{benefit.icon}</div>
-              <h3 className="text-lg font-playfair font-semibold text-[var(--text-primary)] mb-2">
+              <h3 className="text-lg font-playfair font-semibold text-text-primary mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-sm text-[var(--text-muted)] mb-4">
+              <p className="text-sm text-text-muted mb-4">
                 {benefit.description}
               </p>
-              <div className="text-3xl font-playfair font-bold text-[var(--primary)]">
+              <div className="text-3xl font-playfair font-bold text-primary">
                 <AnimatedCounter
                   value={benefit.stat}
                   suffix={benefit.suffix}

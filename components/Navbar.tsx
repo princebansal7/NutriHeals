@@ -59,7 +59,7 @@ export default function Navbar() {
             >
               <LogoIcon className="w-7 h-7" />
             </motion.div>
-            <span className="text-2xl font-playfair font-bold text-[var(--primary)]">
+            <span className="text-2xl font-playfair font-bold text-primary">
               NutriHeals
             </span>
           </Link>
@@ -70,10 +70,10 @@ export default function Navbar() {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors relative group"
+                className="text-text-secondary hover:text-primary transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--primary)] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
           </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-[var(--text-primary)]"
+              className="h-6 w-6 text-text-primary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -135,7 +135,7 @@ export default function Navbar() {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="block w-full text-left px-4 py-2 text-[var(--text-secondary)] hover:text-[var(--primary)] hover:bg-[var(--gradient-start)] rounded-lg transition-all"
+                  className="block w-full text-left px-4 py-2 text-text-secondary hover:text-primary hover:bg-(--gradient-start) rounded-lg transition-all"
                 >
                   {link.name}
                 </button>

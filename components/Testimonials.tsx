@@ -9,7 +9,7 @@ const testimonials = [
     location: 'Mohali',
     rating: 5,
     image: '👩',
-    text: "Lost 15kg in 4 months with Dt. Yogita's guidance. The PCOS-friendly diet plan was a game changer!",
+    text: "Lost 15kg in 4 months with Dt. Yogita's guidance. The PMOS diet plan was a game changer!",
     result: '-15kg in 4 months',
   },
   {
@@ -59,7 +59,7 @@ export default function Testimonials() {
   }, [isPaused]);
 
   return (
-    <section id="testimonials" className="py-20 bg-[var(--surface)]">
+    <section id="testimonials" className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -69,14 +69,14 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-[var(--primary)] font-medium uppercase tracking-wider text-sm">
+          <span className="text-primary font-medium uppercase tracking-wider text-sm">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-text-primary mt-2 mb-4">
             Success Stories from{' '}
             <span className="text-gradient">Happy Clients</span>
           </h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+          <p className="text-text-secondary max-w-2xl mx-auto">
             Real results from real people who transformed their lives with NutriHeals
           </p>
         </motion.div>
@@ -108,21 +108,21 @@ export default function Testimonials() {
 
                 {/* Quote */}
                 <blockquote className="text-center">
-                  <p className="text-lg sm:text-xl text-[var(--text-secondary)] italic mb-8">
+                  <p className="text-lg sm:text-xl text-text-secondary italic mb-8">
                     &ldquo;{testimonials[current].text}&rdquo;
                   </p>
                 </blockquote>
 
                 {/* Client Info */}
                 <div className="flex items-center justify-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-[var(--primary)]/20 flex items-center justify-center text-3xl">
+                  <div className="w-16 h-16 rounded-full bg-(--primary)/20 flex items-center justify-center text-3xl">
                     {testimonials[current].image}
                   </div>
                   <div className="text-center">
-                    <p className="font-playfair font-semibold text-[var(--text-primary)]">
+                    <p className="font-playfair font-semibold text-text-primary">
                       {testimonials[current].name}
                     </p>
-                    <p className="text-sm text-[var(--text-muted)]">
+                    <p className="text-sm text-text-muted">
                       {testimonials[current].location}
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export default function Testimonials() {
 
                 {/* Result Tag */}
                 <div className="mt-6 text-center">
-                  <span className="inline-block px-4 py-2 bg-[var(--primary)]/10 text-[var(--primary)] font-semibold rounded-full">
+                  <span className="inline-block px-4 py-2 bg-(--primary)/10 text-primary font-semibold rounded-full">
                     {testimonials[current].result}
                   </span>
                 </div>
@@ -146,8 +146,8 @@ export default function Testimonials() {
                 onClick={() => setCurrent(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === current
-                    ? 'bg-[var(--primary)] w-8'
-                    : 'bg-[var(--primary)]/30 hover:bg-[var(--primary)]/50'
+                    ? 'bg-primary w-8'
+                    : 'bg-(--primary)/30 hover:bg-(--primary)/50'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -173,14 +173,14 @@ export default function Testimonials() {
               className="glass-card p-6 rounded-2xl"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-[var(--primary)]/20 flex items-center justify-center text-xl">
+                <div className="w-12 h-12 rounded-full bg-(--primary)/20 flex items-center justify-center text-xl">
                   {testimonial.image}
                 </div>
                 <div>
-                  <p className="font-medium text-[var(--text-primary)]">
+                  <p className="font-medium text-text-primary">
                     {testimonial.name}
                   </p>
-                  <p className="text-xs text-[var(--text-muted)]">
+                  <p className="text-xs text-text-muted">
                     {testimonial.location}
                   </p>
                 </div>
@@ -192,10 +192,10 @@ export default function Testimonials() {
                   ))}
                 </div>
               </div>
-              <p className="text-sm text-[var(--text-secondary)] line-clamp-2">
+              <p className="text-sm text-text-secondary line-clamp-2">
                 &ldquo;{testimonial.text}&rdquo;
               </p>
-              <p className="mt-3 text-sm font-medium text-[var(--primary)]">
+              <p className="mt-3 text-sm font-medium text-primary">
                 {testimonial.result}
               </p>
             </motion.div>

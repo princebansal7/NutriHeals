@@ -11,7 +11,7 @@ NutriHeals is a professional diet and nutrition consultation platform led by **D
 NutriHeals provides customised diet plans for a wide range of health conditions and goals:
 
 - **Weight Management** - Sustainable weight loss and healthy weight gain plans
-- **PCOS / PCOD** - Hormonal balance through targeted nutrition
+- **PMOS** (formerly PCOS / PCOD) - Hormonal balance through targeted nutrition
 - **Diabetes** - Blood sugar control via clinical diet planning
 - **Hypertension** - DASH-inspired low-sodium meal plans
 - **Cardiac Health** - Heart-friendly nutrition for cardiovascular wellness
@@ -31,7 +31,7 @@ Each service page includes a detailed breakdown of the condition, risks of leavi
 
 - M.Sc. Dietetics & Nutrition
 - Certified Clinical Dietitian
-- PCOS / PCOD Specialist
+- PMOS Specialist
 - Based in Chandigarh
 
 Consultations are available online via video call or WhatsApp, making it easy to get personalised guidance from anywhere.

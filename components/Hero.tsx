@@ -50,12 +50,12 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, -30, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-20 right-20 w-64 h-64 bg-[var(--accent)]/20 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-64 h-64 bg-(--accent)/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 30, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-20 left-20 w-96 h-96 bg-[var(--primary-light)]/10 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-96 h-96 bg-(--primary-light)/10 rounded-full blur-3xl"
         />
 
         {/* Floating Nutrition Elements */}
@@ -92,18 +92,18 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             <motion.div variants={itemVariants} className="mb-4 flex flex-wrap gap-2 justify-center lg:justify-start">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--surface)]/80 rounded-full text-sm text-[var(--primary)] font-medium shadow-sm">
-                <span className="w-2 h-2 bg-[var(--primary)] rounded-full animate-pulse-gentle" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-(--surface)/80 rounded-full text-sm text-primary font-medium shadow-sm">
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse-gentle" />
                 Registered Dietitian
               </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--primary)]/10 rounded-full text-sm text-[var(--primary)] font-medium">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-(--primary)/10 rounded-full text-sm text-primary font-medium">
                 📍 Chandigarh
               </span>
             </motion.div>
 
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-[var(--text-primary)] leading-tight mb-4"
+              className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-text-primary leading-tight mb-4"
             >
               Your Path to{' '}
               <span className="text-gradient">Healthy Living</span>{' '}
@@ -112,10 +112,10 @@ export default function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg sm:text-xl text-[var(--text-secondary)] mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-text-secondary mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Personalized diet plans for weight loss, PCOS/PCOD, diabetes & more - crafted by{' '}
-              <strong className="text-[var(--primary)]">Dt. Yogita Bansal</strong>, Clinical Dietitian.
+              Personalized diet plans for weight loss, PMOS, diabetes & more - crafted by{' '}
+              <strong className="text-primary">Dt. Yogita Bansal</strong>, Clinical Dietitian.
             </motion.p>
 
             <motion.div
@@ -151,18 +151,18 @@ export default function Hero() {
               className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-6"
             >
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-playfair font-bold text-[var(--primary)]">1.5+</span>
-                <span className="text-sm text-[var(--text-muted)]">Years<br />Experience</span>
+                <span className="text-3xl font-playfair font-bold text-primary">1.5+</span>
+                <span className="text-sm text-text-muted">Years<br />Experience</span>
               </div>
-              <div className="w-px h-12 bg-[var(--text-muted)]/30" />
+              <div className="w-px h-12 bg-(--text-muted)/30" />
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-playfair font-bold text-[var(--primary)]">500+</span>
-                <span className="text-sm text-[var(--text-muted)]">Happy<br />Clients</span>
+                <span className="text-3xl font-playfair font-bold text-primary">500+</span>
+                <span className="text-sm text-text-muted">Happy<br />Clients</span>
               </div>
-              <div className="w-px h-12 bg-[var(--text-muted)]/30" />
+              <div className="w-px h-12 bg-(--text-muted)/30" />
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-playfair font-bold text-[var(--primary)]">4.9</span>
-                <span className="text-sm text-[var(--text-muted)]">Rating<br />⭐⭐⭐⭐⭐</span>
+                <span className="text-3xl font-playfair font-bold text-primary">4.9</span>
+                <span className="text-sm text-text-muted">Rating<br />⭐⭐⭐⭐⭐</span>
               </div>
             </motion.div>
           </motion.div>
@@ -176,16 +176,16 @@ export default function Hero() {
           >
             <div className="relative">
               {/* Main Visual */}
-              <div className="w-full h-[500px] rounded-3xl overflow-hidden glass-card">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--gradient-start)] to-[var(--gradient-end)]">
+              <div className="w-full h-125 rounded-3xl overflow-hidden glass-card">
+                <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-(--gradient-start) to-(--gradient-end)">
                   <div className="text-center">
-                    <div className="w-36 h-36 mx-auto mb-6 rounded-full bg-[var(--primary)]/15 flex items-center justify-center">
+                    <div className="w-36 h-36 mx-auto mb-6 rounded-full bg-(--primary)/15 flex items-center justify-center">
                       <span className="text-8xl">👩‍⚕️</span>
                     </div>
-                    <p className="text-[var(--text-primary)] font-playfair text-2xl font-semibold">
+                    <p className="text-text-primary font-playfair text-2xl font-semibold">
                       Dt. Yogita Bansal
                     </p>
-                    <p className="text-[var(--text-secondary)] mt-1 text-base">
+                    <p className="text-text-secondary mt-1 text-base">
                       Clinical Dietitian &amp; Nutritionist
                     </p>
                     <div className="flex justify-center gap-2 mt-4">
@@ -208,8 +208,8 @@ export default function Hero() {
                     ✅
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">100%</p>
-                    <p className="text-xs text-[var(--text-muted)]">Personalized Plans</p>
+                    <p className="text-sm font-medium text-text-primary">100%</p>
+                    <p className="text-xs text-text-muted">Personalized Plans</p>
                   </div>
                 </div>
               </motion.div>
@@ -220,12 +220,12 @@ export default function Hero() {
                 className="absolute -bottom-6 -left-6 glass-card p-4 rounded-xl"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[var(--accent)]/30 flex items-center justify-center text-xl">
+                  <div className="w-10 h-10 rounded-full bg-(--accent)/30 flex items-center justify-center text-xl">
                     🔬
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">Evidence-Based</p>
-                    <p className="text-xs text-[var(--text-muted)]">Clinical Approach</p>
+                    <p className="text-sm font-medium text-text-primary">Evidence-Based</p>
+                    <p className="text-xs text-text-muted">Clinical Approach</p>
                   </div>
                 </div>
               </motion.div>
@@ -244,12 +244,12 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-[var(--primary)]/30 flex items-start justify-center p-2"
+          className="w-6 h-10 rounded-full border-2 border-(--primary)/30 flex items-start justify-center p-2"
         >
           <motion.div
             animate={{ opacity: [1, 0.5, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 rounded-full bg-[var(--primary)]"
+            className="w-1.5 h-1.5 rounded-full bg-primary"
           />
         </motion.div>
       </motion.div>

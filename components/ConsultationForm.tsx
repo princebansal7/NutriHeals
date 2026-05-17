@@ -14,7 +14,7 @@ const WhatsAppIcon = () => (
 const healthGoals = [
   'Weight Loss',
   'Weight Gain',
-  'PCOS/PCOD Management',
+  'PMOS Management',
   'Diabetes Management',
   'Thyroid Disorder',
   'High Blood Pressure',
@@ -132,45 +132,45 @@ export default function ConsultationForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[var(--primary)] font-medium uppercase tracking-wider text-sm">
+            <span className="text-primary font-medium uppercase tracking-wider text-sm">
               Get Started
             </span>
-            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-text-primary mt-2 mb-4">
               Start Your Health{' '}
               <span className="text-gradient">Transformation Today</span>
             </h2>
-            <p className="text-[var(--text-secondary)] mb-8">
+            <p className="text-text-secondary mb-8">
               Fill out the form and our team will get back to you within 24 hours to schedule your consultation.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[var(--primary)]/10 flex items-center justify-center text-xl">
+                <div className="w-12 h-12 rounded-xl bg-(--primary)/10 flex items-center justify-center text-xl">
                   📱
                 </div>
                 <div>
-                  <p className="font-medium text-[var(--text-primary)]">WhatsApp</p>
-                  <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors">Connect on WhatsApp</a>
+                  <p className="font-medium text-text-primary">WhatsApp</p>
+                  <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-text-muted hover:text-primary transition-colors">Connect on WhatsApp</a>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[var(--primary)]/10 flex items-center justify-center text-xl">
+                <div className="w-12 h-12 rounded-xl bg-(--primary)/10 flex items-center justify-center text-xl">
                   📧
                 </div>
                 <div>
-                  <p className="font-medium text-[var(--text-primary)]">Email</p>
-                  <a href="mailto:contact@nutriheals.in" className="text-sm text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors">contact@nutriheals.in</a>
+                  <p className="font-medium text-text-primary">Email</p>
+                  <a href="mailto:contact@nutriheals.in" className="text-sm text-text-muted hover:text-primary transition-colors">contact@nutriheals.in</a>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[var(--primary)]/10 flex items-center justify-center text-xl">
+                <div className="w-12 h-12 rounded-xl bg-(--primary)/10 flex items-center justify-center text-xl">
                   📍
                 </div>
                 <div>
-                  <p className="font-medium text-[var(--text-primary)]">Location</p>
-                  <p className="text-sm text-[var(--text-muted)]">Chandigarh</p>
+                  <p className="font-medium text-text-primary">Location</p>
+                  <p className="text-sm text-text-muted">Chandigarh</p>
                 </div>
               </div>
             </div>
@@ -193,23 +193,23 @@ export default function ConsultationForm() {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center text-4xl">
                   ✓
                 </div>
-                <h3 className="text-2xl font-playfair font-bold text-[var(--primary)] mb-2">
+                <h3 className="text-2xl font-playfair font-bold text-primary mb-2">
                   Thank You!
                 </h3>
-                <p className="text-[var(--text-secondary)]">
+                <p className="text-text-secondary">
                   We have received your request. Our team will contact you soon.
                 </p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <h3 className="text-xl font-playfair font-semibold text-[var(--text-primary)] mb-4">
+                <h3 className="text-xl font-playfair font-semibold text-text-primary mb-4">
                   Book Your Consultation
                 </h3>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   {/* Name */}
                   <div>
-                    <label className="block text-sm font-medium text-[var(--text-primary)] mb-1">
+                    <label className="block text-sm font-medium text-text-primary mb-1">
                       Name *
                     </label>
                     <input
@@ -218,8 +218,8 @@ export default function ConsultationForm() {
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.name ? 'border-red-500' : 'border-[var(--primary)]/20'
-                      } bg-[var(--surface)] focus:border-[var(--primary)] focus:ring-1 focus:ring-[var(--primary)] outline-none transition-all`}
+                        errors.name ? 'border-red-500' : 'border-(--primary)/20'
+                      } bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all`}
                       placeholder="Your name"
                     />
                     {errors.name && (
@@ -229,7 +229,7 @@ export default function ConsultationForm() {
 
                   {/* Mobile */}
                   <div>
-                    <label className="block text-sm font-medium text-[var(--text-primary)] mb-1">
+                    <label className="block text-sm font-medium text-text-primary mb-1">
                       Mobile *
                     </label>
                     <input
@@ -239,8 +239,8 @@ export default function ConsultationForm() {
                       onChange={handleChange}
                       maxLength={10}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.mobile ? 'border-red-500' : 'border-[var(--primary)]/20'
-                      } bg-[var(--surface)] focus:border-[var(--primary)] focus:ring-1 focus:ring-[var(--primary)] outline-none transition-all`}
+                        errors.mobile ? 'border-red-500' : 'border-(--primary)/20'
+                      } bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all`}
                       placeholder="10-digit mobile number"
                     />
                     {errors.mobile && (
@@ -251,7 +251,7 @@ export default function ConsultationForm() {
 
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-medium text-[var(--text-primary)] mb-1">
+                  <label className="block text-sm font-medium text-text-primary mb-1">
                     Email (Optional)
                   </label>
                   <input
@@ -260,8 +260,8 @@ export default function ConsultationForm() {
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.email ? 'border-red-500' : 'border-[var(--primary)]/20'
-                    } bg-[var(--surface)] focus:border-[var(--primary)] focus:ring-1 focus:ring-[var(--primary)] outline-none transition-all`}
+                      errors.email ? 'border-red-500' : 'border-(--primary)/20'
+                    } bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all`}
                     placeholder="your@email.com"
                   />
                   {errors.email && (
@@ -272,7 +272,7 @@ export default function ConsultationForm() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {/* Age */}
                   <div>
-                    <label className="block text-sm font-medium text-[var(--text-primary)] mb-1">
+                    <label className="block text-sm font-medium text-text-primary mb-1">
                       Age *
                     </label>
                     <input
@@ -281,8 +281,8 @@ export default function ConsultationForm() {
                       value={formData.age}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.age ? 'border-red-500' : 'border-[var(--primary)]/20'
-                      } bg-[var(--surface)] focus:border-[var(--primary)] focus:ring-1 focus:ring-[var(--primary)] outline-none transition-all`}
+                        errors.age ? 'border-red-500' : 'border-(--primary)/20'
+                      } bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all`}
                       placeholder="Your age"
                     />
                     {errors.age && (
@@ -292,7 +292,7 @@ export default function ConsultationForm() {
 
                   {/* Gender */}
                   <div>
-                    <label className="block text-sm font-medium text-[var(--text-primary)] mb-1">
+                    <label className="block text-sm font-medium text-text-primary mb-1">
                       Gender *
                     </label>
                     <select
@@ -300,8 +300,8 @@ export default function ConsultationForm() {
                       value={formData.gender}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.gender ? 'border-red-500' : 'border-[var(--primary)]/20'
-                      } bg-[var(--surface)] focus:border-[var(--primary)] focus:ring-1 focus:ring-[var(--primary)] outline-none transition-all`}
+                        errors.gender ? 'border-red-500' : 'border-(--primary)/20'
+                      } bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all`}
                     >
                       <option value="">Select gender</option>
                       <option value="male">Male</option>
@@ -316,7 +316,7 @@ export default function ConsultationForm() {
 
                 {/* Health Goal */}
                 <div>
-                  <label className="block text-sm font-medium text-[var(--text-primary)] mb-1">
+                  <label className="block text-sm font-medium text-text-primary mb-1">
                     Health Goal *
                   </label>
                   <select
@@ -324,8 +324,8 @@ export default function ConsultationForm() {
                     value={formData.healthGoal}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-xl border ${
-                      errors.healthGoal ? 'border-red-500' : 'border-[var(--primary)]/20'
-                    } bg-[var(--surface)] focus:border-[var(--primary)] focus:ring-1 focus:ring-[var(--primary)] outline-none transition-all`}
+                      errors.healthGoal ? 'border-red-500' : 'border-(--primary)/20'
+                    } bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all`}
                   >
                     <option value="">Select your health goal</option>
                     {healthGoals.map((goal) => (
@@ -341,7 +341,7 @@ export default function ConsultationForm() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-[var(--text-primary)] mb-1">
+                  <label className="block text-sm font-medium text-text-primary mb-1">
                     Message (Optional)
                   </label>
                   <textarea
@@ -349,7 +349,7 @@ export default function ConsultationForm() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={3}
-                    className="w-full px-4 py-3 rounded-xl border border-[var(--primary)]/20 bg-[var(--surface)] focus:border-[var(--primary)] focus:ring-1 focus:ring-[var(--primary)] outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-(--primary)/20 bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
                     placeholder="Tell us about your health concerns..."
                   />
                 </div>

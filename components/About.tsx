@@ -6,7 +6,7 @@ export default function About() {
   const certifications = [
     { name: 'M.Sc. Dietetics & Nutrition', icon: '🎓' },
     { name: 'Clinical Dietitian', icon: '🏥' },
-    { name: 'PCOS/PCOD Specialist', icon: '💪' },
+    { name: 'PMOS Specialist', icon: '💪' },
     { name: '1.5+ Years Experience', icon: '⭐' },
   ];
 
@@ -30,7 +30,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-[var(--surface)]">
+    <section id="about" className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -43,16 +43,16 @@ export default function About() {
           <motion.div variants={itemVariants} className="relative">
             <div className="relative">
               {/* Main Image Placeholder */}
-              <div className="w-full h-[500px] rounded-3xl overflow-hidden glass-card">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--primary)]/10 to-[var(--accent)]/20">
+              <div className="w-full h-125 rounded-3xl overflow-hidden glass-card">
+                <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-(--primary)/10 to-(--accent)/20">
                   <div className="text-center">
-                    <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-[var(--primary)]/20 flex items-center justify-center">
+                    <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-(--primary)/20 flex items-center justify-center">
                       <span className="text-7xl">👩‍⚕️</span>
                     </div>
-                    <p className="text-[var(--text-secondary)] font-playfair text-xl">
+                    <p className="text-text-secondary font-playfair text-xl">
                       Dt. Yogita Bansal
                     </p>
-                    <p className="text-[var(--text-muted)] mt-2">
+                    <p className="text-text-muted mt-2">
                       Clinical Dietitian
                     </p>
                   </div>
@@ -63,30 +63,30 @@ export default function About() {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-                className="absolute -top-4 -left-4 w-24 h-24 border-2 border-dashed border-[var(--primary)]/30 rounded-full"
+                className="absolute -top-4 -left-4 w-24 h-24 border-2 border-dashed border-(--primary)/30 rounded-full"
               />
             </div>
           </motion.div>
 
           {/* Content Section */}
           <motion.div variants={itemVariants}>
-            <span className="text-[var(--primary)] font-medium uppercase tracking-wider text-sm">
+            <span className="text-primary font-medium uppercase tracking-wider text-sm">
               About Me
             </span>
-            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-[var(--text-primary)] mt-2 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-text-primary mt-2 mb-6">
               Transforming Lives Through{' '}
               <span className="text-gradient">Evidence-Based Nutrition</span>
             </h2>
 
-            <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
+            <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
-                Hello! I am <strong className="text-[var(--text-primary)]">Dt. Yogita Bansal</strong>, a certified Clinical Dietitian based in Chandigarh, dedicated to helping individuals achieve their health goals through personalized, evidence-based nutrition plans.
+                Hello! I am <strong className="text-text-primary">Dt. Yogita Bansal</strong>, a certified Clinical Dietitian based in Chandigarh, dedicated to helping individuals achieve their health goals through personalized, evidence-based nutrition plans.
               </p>
               <p>
-                My approach combines <strong className="text-[var(--text-primary)]">scientific research</strong> with practical lifestyle modifications. I believe in creating sustainable habits rather than imposing restrictions. Every individual is unique, and so is their path to wellness.
+                My approach combines <strong className="text-text-primary">scientific research</strong> with practical lifestyle modifications. I believe in creating sustainable habits rather than imposing restrictions. Every individual is unique, and so is their path to wellness.
               </p>
               <p>
-                Whether you are looking to <strong className="text-[var(--primary)]">lose weight</strong>, manage <strong className="text-[var(--primary)]">PCOS/PCOD</strong>, or address other health concerns through proper nutrition, I am here to guide you every step of the way.
+                Whether you are looking to <strong className="text-primary">lose weight</strong>, manage <strong className="text-primary">PMOS</strong>, or address other health concerns through proper nutrition, I am here to guide you every step of the way.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export default function About() {
                   className="glass-card p-4 rounded-xl flex items-center gap-3"
                 >
                   <span className="text-2xl">{cert.icon}</span>
-                  <span className="text-sm font-medium text-[var(--text-primary)]">
+                  <span className="text-sm font-medium text-text-primary">
                     {cert.name}
                   </span>
                 </motion.div>
@@ -108,13 +108,13 @@ export default function About() {
 
             {/* Specializations */}
             <div className="mt-8">
-              <h3 className="text-lg font-playfair font-semibold text-[var(--text-primary)] mb-4">
+              <h3 className="text-lg font-playfair font-semibold text-text-primary mb-4">
                 Specializations
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
                   'Weight Management',
-                  'PCOS/PCOD',
+                  'PMOS',
                   'Diabetes',
                   'Thyroid',
                   'Heart Health',
@@ -122,7 +122,7 @@ export default function About() {
                 ].map((spec, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-[var(--gradient-start)] text-[var(--primary)] text-sm rounded-full"
+                    className="px-3 py-1 bg-(--gradient-start) text-primary text-sm rounded-full"
                   >
                     {spec}
                   </span>
