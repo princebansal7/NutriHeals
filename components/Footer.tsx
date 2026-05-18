@@ -52,7 +52,7 @@ export default function Footer() {
             </p>
             <p className="text-sm">
               <strong>Dt. Yogita Bansal</strong><br />
-              <span className="text-white/60">Clinical Dietitian | M.Sc. Dietetics & Nutrition</span>
+              <span className="text-white/60">Qualified Clinical Dietitian | M.Sc. Dietetics & Nutrition</span>
             </p>
           </div>
 

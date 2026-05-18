@@ -3,6 +3,7 @@ import About from '@/components/About';
 import DietPlans from '@/components/DietPlans';
 import Benefits from '@/components/Benefits';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import Plans from '@/components/Plans';
 import Testimonials from '@/components/Testimonials';
 import ConsultationForm from '@/components/ConsultationForm';
 import FAQ from '@/components/FAQ';
@@ -17,6 +18,7 @@ export default function Home() {
       <DietPlans />
       <Benefits />
       <WhyChooseUs />
+      <Plans />
       <Testimonials />
       <ConsultationForm />
       <FAQ />

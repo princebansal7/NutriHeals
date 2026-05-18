@@ -345,6 +345,80 @@ export default function ServicePageClient({ service }: { service: ServiceData })
         </div>
       </section>
 
+      {/* ── Plans ── */}
+      <section className="py-16 bg-background">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+              <motion.div variants={fadeUp} className="text-center mb-10">
+                <SectionLabel>Choose your commitment</SectionLabel>
+                <SectionHeading>Pick a <span className="text-gradient">Plan Duration</span></SectionHeading>
+                <p className="text-text-secondary max-w-xl mx-auto">
+                  All plans are fully personalised. Longer plans allow deeper habit change and better results.
+                </p>
+              </motion.div>
+
+              <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { duration: '1 Month', plans: 3, tagline: 'Beginners & short-term goals', popular: false },
+                  { duration: '3 Months', plans: 9, tagline: 'Consistency & visible changes', popular: true },
+                  { duration: '6 Months', plans: 18, tagline: 'Long-term transformation', popular: false, pause: 15 },
+                  { duration: '9 Months', plans: 27, tagline: 'Deep habit building', popular: false, pause: 25 },
+                  { duration: '12 Months', plans: 36, tagline: 'Complete lifestyle overhaul', popular: false, pause: 40 },
+                ].map((plan) => (
+                  <motion.div
+                    key={plan.duration}
+                    variants={fadeUp}
+                    className={`glass-card rounded-2xl p-5 flex flex-col relative ${plan.popular ? 'border-2 border-primary' : ''}`}
+                  >
+                    {plan.popular && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                        Most Popular
+                      </span>
+                    )}
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-playfair font-bold text-text-primary text-lg">{plan.duration}</h4>
+                      <div className="text-right">
+                        <span className="text-2xl font-playfair font-bold text-primary">{plan.plans}</span>
+                        <span className="text-xs text-text-muted block">diet plans</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-text-secondary mb-4 flex-1">{plan.tagline}</p>
+                    {'pause' in plan && (
+                      <p className="text-xs text-amber-600 mb-3">⏸ Up to {plan.pause}-day pause facility</p>
+                    )}
+                    <button
+                      onClick={scrollToContact}
+                      className={`w-full py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                        plan.popular
+                          ? 'bg-primary text-white hover:opacity-90'
+                          : 'border border-(--primary)/30 text-primary hover:bg-primary hover:text-white'
+                      }`}
+                    >
+                      Get Started
+                    </button>
+                  </motion.div>
+                ))}
+
+                {/* See all plans card */}
+                <motion.div
+                  variants={fadeUp}
+                  className="glass-card rounded-2xl p-5 flex flex-col items-center justify-center text-center border border-dashed border-(--primary)/30"
+                >
+                  <p className="text-sm text-text-secondary mb-3">
+                    Want to compare all plans in detail?
+                  </p>
+                  <Link
+                    href="/#plans"
+                    className="text-sm font-semibold text-primary hover:underline"
+                  >
+                    View Full Plan Details →
+                  </Link>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </div>
+      </section>
+
       {/* ── Final CTA ── */}
       <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-4 text-center">

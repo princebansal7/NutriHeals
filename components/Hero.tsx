@@ -94,7 +94,7 @@ export default function Hero() {
             <motion.div variants={itemVariants} className="mb-4 flex flex-wrap gap-2 justify-center lg:justify-start">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-(--surface)/80 rounded-full text-sm text-primary font-medium shadow-sm">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse-gentle" />
-                Registered Dietitian
+                Clinical Dietitian
               </span>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-(--primary)/10 rounded-full text-sm text-primary font-medium">
                 📍 Chandigarh
@@ -115,7 +115,7 @@ export default function Hero() {
               className="text-lg sm:text-xl text-text-secondary mb-8 max-w-xl mx-auto lg:mx-0"
             >
               Personalized diet plans for weight loss, PMOS, diabetes & more - crafted by{' '}
-              <strong className="text-primary">Dt. Yogita Bansal</strong>, Clinical Dietitian.
+              <strong className="text-primary">Dt. Yogita Bansal</strong>, Qualified Clinical Dietitian.
             </motion.p>
 
             <motion.div
@@ -186,7 +186,7 @@ export default function Hero() {
                       Dt. Yogita Bansal
                     </p>
                     <p className="text-text-secondary mt-1 text-base">
-                      Clinical Dietitian &amp; Nutritionist
+                      Qualified Clinical Dietitian
                     </p>
                     <div className="flex justify-center gap-2 mt-4">
                       {['🥗', '🥑', '🫐', '🥦'].map((emoji, i) => (

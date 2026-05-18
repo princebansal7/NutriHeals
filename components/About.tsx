@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function About() {
   const certifications = [
     { name: 'M.Sc. Dietetics & Nutrition', icon: '🎓' },
-    { name: 'Clinical Dietitian', icon: '🏥' },
+    { name: 'Qualified Clinical Dietitian', icon: '🏥' },
     { name: 'PMOS Specialist', icon: '💪' },
     { name: '1.5+ Years Experience', icon: '⭐' },
   ];
@@ -53,7 +53,7 @@ export default function About() {
                       Dt. Yogita Bansal
                     </p>
                     <p className="text-text-muted mt-2">
-                      Clinical Dietitian
+                      Qualified Clinical Dietitian
                     </p>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export default function About() {
 
             <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
-                Hello! I am <strong className="text-text-primary">Dt. Yogita Bansal</strong>, a certified Clinical Dietitian based in Chandigarh, dedicated to helping individuals achieve their health goals through personalized, evidence-based nutrition plans.
+                Hello! I am <strong className="text-text-primary">Dt. Yogita Bansal</strong>, a qualified Clinical Dietitian based in Chandigarh, dedicated to helping individuals achieve their health goals through personalized, evidence-based nutrition plans.
               </p>
               <p>
                 My approach combines <strong className="text-text-primary">scientific research</strong> with practical lifestyle modifications. I believe in creating sustainable habits rather than imposing restrictions. Every individual is unique, and so is their path to wellness.
