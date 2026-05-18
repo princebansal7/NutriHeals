@@ -161,6 +161,12 @@ export default function ServicePageClient({ service }: { service: ServiceData })
     window.location.href = '/#contact';
   };
 
+  const goToContactWithPlan = (plan: string) => {
+    sessionStorage.setItem('preferredPlan', plan);
+    sessionStorage.setItem('preferredGoal', service.name);
+    router.push('/#contact');
+  };
+
   const goBack = () => {
     router.back();
   };
@@ -387,7 +393,7 @@ export default function ServicePageClient({ service }: { service: ServiceData })
                       <p className="text-xs text-amber-600 mb-3">⏸ Up to {plan.pause}-day pause facility</p>
                     )}
                     <button
-                      onClick={scrollToContact}
+                      onClick={() => goToContactWithPlan(plan.duration)}
                       className={`w-full py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
                         plan.popular
                           ? 'bg-primary text-white hover:opacity-90'

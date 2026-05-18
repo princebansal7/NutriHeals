@@ -16,23 +16,45 @@ const healthGoals = [
   'Weight Gain',
   'PMOS Management',
   'Diabetes Management',
-  'Thyroid Disorder',
-  'High Blood Pressure',
-  'Heart Health',
-  'Gut Health',
+  'Hypertension',
+  'Cardiac Health',
+  'Renal Disease',
+  'Fatty Liver',
+  'Thyroid Disorders',
   'Cholesterol Management',
+  'Hormonal Imbalance',
+  'Acidity & GERD',
+  'Constipation',
+  'Bloating',
+  'Celiac Disease',
   'Other',
 ];
 
+const planOptions = [
+  '1 Month',
+  '3 Months',
+  '6 Months',
+  '9 Months',
+  '12 Months',
+  'Not sure — decide after consultation',
+];
+
 export default function ConsultationForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    mobile: '',
-    email: '',
-    age: '',
-    gender: '',
-    healthGoal: '',
-    message: '',
+  const [formData, setFormData] = useState(() => {
+    const savedPlan = typeof window !== 'undefined' ? sessionStorage.getItem('preferredPlan') : null;
+    const savedGoal = typeof window !== 'undefined' ? sessionStorage.getItem('preferredGoal') : null;
+    if (savedPlan) sessionStorage.removeItem('preferredPlan');
+    if (savedGoal) sessionStorage.removeItem('preferredGoal');
+    return {
+      name: '',
+      mobile: '',
+      email: '',
+      age: '',
+      gender: '',
+      healthGoal: savedGoal ?? '',
+      plan: savedPlan ?? '',
+      message: '',
+    };
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -74,7 +96,7 @@ export default function ConsultationForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validate()) return;
@@ -94,6 +116,7 @@ export default function ConsultationForm() {
           age: formData.age,
           gender: formData.gender,
           health_goal: formData.healthGoal,
+          preferred_plan: formData.plan || 'Not specified',
           message: formData.message || 'No additional message',
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
@@ -102,7 +125,7 @@ export default function ConsultationForm() {
       setIsSuccess(true);
       setTimeout(() => {
         setIsSuccess(false);
-        setFormData({ name: '', mobile: '', email: '', age: '', gender: '', healthGoal: '', message: '' });
+        setFormData({ name: '', mobile: '', email: '', age: '', gender: '', healthGoal: '', plan: '', message: '' });
       }, 4000);
     } catch {
       setSubmitError('Something went wrong. Please try WhatsApp or call us directly.');
@@ -337,6 +360,24 @@ export default function ConsultationForm() {
                   {errors.healthGoal && (
                     <p className="text-red-500 text-xs mt-1">{errors.healthGoal}</p>
                   )}
+                </div>
+
+                {/* Preferred Plan */}
+                <div>
+                  <label className="block text-sm font-medium text-text-primary mb-1">
+                    Preferred Plan <span className="text-text-muted font-normal">(Optional)</span>
+                  </label>
+                  <select
+                    name="plan"
+                    value={formData.plan}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-(--primary)/20 bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  >
+                    <option value="">Not sure — decide after consultation</option>
+                    {planOptions.map((p) => (
+                      <option key={p} value={p}>{p}</option>
+                    ))}
+                  </select>
                 </div>
 
                 {/* Message */}
