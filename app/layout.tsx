@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollProgress from "@/components/ScrollProgress";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "NutriHeals - Dt. Yogita Bansal | Clinical Dietitian",
@@ -43,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className={`scroll-smooth ${dmSans.variable} ${playfairDisplay.variable}`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
         <ScrollProgress />
         <Navbar />
