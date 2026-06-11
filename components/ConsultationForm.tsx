@@ -36,7 +36,6 @@ const planOptions = [
   '6 Months',
   '9 Months',
   '12 Months',
-  'Not sure — decide after consultation',
 ];
 
 export default function ConsultationForm() {
@@ -152,7 +151,7 @@ export default function ConsultationForm() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
           >
             <span className="text-primary font-medium uppercase tracking-wider text-sm">
@@ -203,7 +202,7 @@ export default function ConsultationForm() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
             className="glass-card p-8 rounded-3xl"
           >

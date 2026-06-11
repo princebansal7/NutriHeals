@@ -36,7 +36,7 @@ export default function About() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.15 }}
           className="grid lg:grid-cols-2 gap-12 items-center"
         >
           {/* Image Section */}

@@ -124,7 +124,7 @@ export default function Plans() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -143,7 +143,7 @@ export default function Plans() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="flex flex-wrap justify-center gap-2 mb-10"
         >
@@ -243,7 +243,7 @@ export default function Plans() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-10 grid sm:grid-cols-3 gap-4"
         >
@@ -264,7 +264,7 @@ export default function Plans() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ delay: 0.2 }}
           className="mt-8 p-6 bg-(--gradient-start) rounded-2xl border border-(--primary)/10"
         >

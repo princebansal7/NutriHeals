@@ -51,7 +51,7 @@ export default function FAQ() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -74,7 +74,7 @@ export default function FAQ() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ delay: index * 0.1 }}
               className="glass-card rounded-2xl overflow-hidden"
             >
@@ -117,7 +117,7 @@ export default function FAQ() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ delay: 0.3 }}
           className="text-center mt-12"
         >

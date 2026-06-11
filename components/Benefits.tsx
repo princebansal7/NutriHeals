@@ -47,7 +47,7 @@ const benefits = [
     suffix: '+',
   },
   {
-    icon: '🦠',
+    icon: '🌱',
     title: 'Better Gut Health',
     description: 'Improve digestion and reduce digestive issues',
     stat: 80,
@@ -107,7 +107,7 @@ export default function Benefits() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -130,12 +130,12 @@ export default function Benefits() {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
               className="glass-card p-6 rounded-2xl text-center group"
             >
-              <div className="text-4xl mb-4">{benefit.icon}</div>
+              <div className="text-4xl mb-4 inline-block transition-transform duration-300 group-hover:scale-125 group-hover:-translate-y-1">{benefit.icon}</div>
               <h3 className="text-lg font-playfair font-semibold text-text-primary mb-2">
                 {benefit.title}
               </h3>

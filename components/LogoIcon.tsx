@@ -6,137 +6,96 @@ export default function LogoIcon({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 220 220"
+      viewBox="0 0 660 600"
       className={className}
       fill="none"
     >
-      {/* TOP OUTER ARC */}
-      <path
-        d="M42 122 C46 30 96 4 170 34"
-        stroke="#145238"
-        strokeWidth="7"
-        strokeLinecap="round"
-      />
 
-      {/* INNER ARC */}
-      <path
-        d="M54 122 C58 44 100 14 145 46"
-        stroke="#145238"
-        strokeWidth="3"
-        strokeLinecap="round"
-      />
+  {/* <!-- BIG ARC --> */}
+  <path d="M87.1 267.8 L90.4 253.9 L94.3 240.2 L99.0 226.8 L104.3 213.7 L110.3 200.9 L117.0 188.5 L124.4 176.5 L132.4 164.9 L141.0 153.7 L150.1 143.1 L159.7 132.9 L169.9 123.3 L180.5 114.2 L191.5 105.8 L203.0 97.9 L214.7 90.5 L226.8 83.8 L239.2 77.6 L251.9 72.2 L264.9 67.4 L278.0 63.2 L291.3 59.6 L304.8 56.8 L318.4 54.7 L332.1 53.2 L345.8 52.6 L359.6 52.7 L373.3 53.5 L386.9 55.0 L400.5 57.2 L413.8 60.3 L427.0 64.0 L439.9 68.5 L452.6 73.5 L460.8 77.3 L460.7 77.7 L452.2 74.3 L439.4 69.9 L426.4 66.1 L413.2 63.0 L399.8 60.7 L386.4 58.9 L373.0 57.8 L359.5 57.4 L346.0 57.7 L332.6 58.7 L319.2 60.4 L306.0 62.8 L292.9 65.8 L280.0 69.6 L267.3 74.0 L254.9 79.2 L242.8 85.0 L231.1 91.4 L219.7 98.5 L208.7 106.1 L198.3 114.5 L188.4 123.3 L178.9 132.6 L170.0 142.5 L161.6 152.7 L153.7 163.3 L146.5 174.4 L139.9 185.7 L133.8 197.4 L128.4 209.3 L123.6 221.5 L119.4 233.9 L115.8 246.4 L113.0 259.1 L110.8 271.9 Z" fill="#224A34"/>
+  {/* <!-- INNER THIN ARC --> */}
+  <path d="M134.9 267.8 L137.1 256.3 L139.9 244.9 L143.2 233.6 L147.2 222.6 L151.7 211.8 L156.7 201.3 L162.3 191.1 L168.4 181.2 L175.0 171.6 L182.1 162.4 L189.7 153.5 L197.7 145.1 L206.2 137.3 L215.1 129.8 L224.3 122.9 L233.9 116.5 L243.8 110.6 L254.0 105.2 L264.4 100.4 L275.0 96.0 L285.8 92.2 L296.8 89.0 L307.9 86.3 L319.1 84.3 L330.5 82.9 L341.8 82.0 L353.2 81.8 L357.0 81.8 L357.0 82.2 L353.2 82.3 L341.9 83.1 L330.6 84.4 L319.5 86.3 L308.5 88.8 L297.6 91.8 L286.9 95.5 L276.4 99.6 L266.2 104.3 L256.3 109.6 L246.7 115.4 L237.4 121.7 L228.5 128.5 L220.0 135.7 L211.8 143.3 L204.1 151.4 L196.8 159.7 L189.9 168.4 L183.5 177.5 L177.5 186.8 L172.1 196.5 L167.2 206.4 L162.8 216.6 L159.0 226.9 L155.7 237.5 L153.0 248.1 L150.9 258.9 L149.3 269.8 Z" fill="#224A34"/>
 
-      {/* MEDICAL CROSS */}
-      <rect x="102" y="46" width="16" height="42" rx="1" fill="#B3872D" />
-      <rect x="89" y="59" width="42" height="16" rx="1" fill="#B3872D" />
+  {/* <!-- MEDICAL CROSS --> */}
+  <rect x="352" y="119" width="30" height="109" fill="#A7853D"/>
+  <rect x="315" y="158" width="105" height="31" fill="#A7853D"/>
 
-      {/* LEFT BACK LEAF */}
-      <path
-        d="
-          M18 126
-          C24 98 48 84 80 92
-          C62 114 60 144 78 170
-          C44 168 22 150 18 126
-          Z
-        "
-        fill="#145238"
-      />
+  {/* <!-- BOWL RIM: lens, thick center, pointed ends --> */}
+  <path d="M338 288
+           C 376 252, 428 246, 472 246
+           C 522 248, 576 270, 614 296
+           C 570 288, 518 290, 472 290
+           C 424 292, 376 292, 338 288
+           Z" fill="#224A34"/>
 
-      {/* BOWL — perfect ellipse arc, rx=60 ry=84, magic number 0.5523 */}
-      {/* Left:  (76,106) CP(76,152) CP(103,190) (136,190) */}
-      {/* Right: (136,190) CP(169,190) CP(196,152) (196,106) — exact mirror */}
-      <path
-        d="M 76 106 C 76 152 103 190 136 190 C 169 190 196 152 196 106 Z"
-        fill="#145238"
-      />
+  {/* <!-- PESTLE: outlined pass creates white separation across the rim --> */}
+  <path d="M492 190
+           C 474 216, 458 242, 450 266
+           L 452 288
+           L 498 292
+           C 508 264, 514 228, 516 198
+           Z" fill="#224A34" stroke="#ffffff" strokeWidth="8"/>
+  <circle cx="518" cy="168" r="30" fill="#224A34"/>
+  <path d="M492 190
+           C 474 216, 458 242, 450 266
+           L 452 288
+           L 498 292
+           C 508 264, 514 228, 516 198
+           Z" fill="#224A34"/>
 
-      {/* WHITE RIM */}
-      <ellipse
-        cx="136"
-        cy="106"
-        rx="62"
-        ry="14"
-        fill="white"
-      />
+  {/* <!-- BOWL FRONT WALL: white crescent closes at both rim tips --> */}
+  <path d="M336 296
+           C 390 314, 430 317, 470 315
+           C 520 312, 572 302, 612 293
+           C 600 372, 556 444, 472 478
+           C 392 506, 304 519, 256 526
+           C 248 466, 282 366, 336 296 Z" fill="#224A34"/>
 
-      {/* INNER OPENING */}
-      <ellipse
-        cx="136"
-        cy="109"
-        rx="46"
-        ry="9"
-        fill="#145238"
-      />
+  {/* <!-- BOTTOM SWOOSH --> */}
+  <path d="M126 424
+           C 162 500, 262 550, 380 560
+           C 480 570, 572 508, 628 398
+           C 588 452, 508 498, 426 514
+           C 318 528, 196 486, 126 424
+           Z" fill="#224A34"/>
 
-      {/* PESTLE */}
-      <line
-        x1="166"
-        y1="60"
-        x2="154"
-        y2="110"
-        stroke="#145238"
-        strokeWidth="12"
-        strokeLinecap="round"
-      />
+  {/* <!-- BACK LEFT LEAF --> */}
+  <path d="M38 306
+           C 95 286, 165 286, 238 296
+           C 246 300, 252 306, 255 312
+           C 260 370, 248 412, 216 436
+           C 166 428, 110 402, 72 354
+           C 58 332, 45 318, 38 306 Z" fill="#224A34"/>
+  {/* <!-- white chevron notch --> */}
+  <path d="M135 338
+           C 155 333, 178 326, 204 317
+           L 222 312
+           C 219 328, 220 342, 225 356
+           L 204 350
+           C 178 345, 156 342, 135 338 Z" fill="#ffffff"/>
 
-      {/* PESTLE BALL */}
-      <circle cx="170" cy="52" r="12" fill="#145238" />
+  {/* <!-- FRONT LEFT LEAF --> */}
+  <path d="M196 238
+           C 300 250, 392 330, 398 425
+           C 398 476, 368 506, 326 506
+           C 246 498, 184 428, 176 336
+           C 174 298, 184 262, 196 238 Z"
+        fill="#7C9A3E" stroke="#ffffff" strokeWidth="8"/>
+  <path d="M324 502 C 290 416, 246 320, 200 244"
+        stroke="#ffffff" strokeWidth="9" strokeLinecap="round" fill="none"/>
 
-      {/* BOTTOM SWOOSH — drawn before front leaves so leaves appear on top */}
-      <path
-        d="M34 172 C78 202 154 202 202 164"
-        stroke="#145238"
-        strokeWidth="8"
-        strokeLinecap="round"
-      />
+  {/* <!-- FRONT RIGHT LEAF --> */}
+  <path d="M532 344
+           C 548 428, 512 500, 434 516
+           C 396 520, 372 500, 370 464
+           C 372 404, 426 352, 532 344 Z"
+        fill="#A8BC5A" stroke="#ffffff" strokeWidth="8"/>
+  <path d="M390 508 C 434 446, 480 396, 526 350"
+        stroke="#ffffff" strokeWidth="8" strokeLinecap="round" fill="none"/>
 
-      {/* LEFT FRONT LEAF — slanted left, drawn in front of bowl */}
-      <path
-        d="
-          M86 178
-          C58 154 58 116 84 90
-          C100 74 122 82 132 108
-          C142 134 128 166 106 182
-          C98 186 90 184 86 178
-          Z
-        "
-        fill="#97BB3D"
-        transform="rotate(-14 104 130)"
-      />
-
-      {/* LEFT LEAF VEIN */}
-      <path
-        d="M104 176 C98 140 92 114 84 96"
-        stroke="white"
-        strokeWidth="3"
-        strokeLinecap="round"
-        opacity="0.75"
-        transform="rotate(-14 104 130)"
-      />
-
-      {/* RIGHT FRONT LEAF — slanted right, drawn in front of bowl */}
-      <path
-        d="
-          M126 178
-          C114 156 116 126 132 104
-          C144 88 162 94 168 116
-          C174 138 164 166 146 182
-          C140 186 132 184 126 178
-          Z
-        "
-        fill="#B5CC42"
-        transform="rotate(12 144 138)"
-      />
-
-      {/* RIGHT LEAF VEIN */}
-      <path
-        d="M142 178 C142 146 144 122 148 108"
-        stroke="white"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        opacity="0.75"
-        transform="rotate(12 144 138)"
-      />
+  {/* <!-- GOLD ACCENT LINES --> */}
+  <path d="M624 462 L660 455" stroke="#C9A96A" strokeWidth="4" strokeLinecap="round"/>
+  <path d="M0 528 L46 521" stroke="#C9A96A" strokeWidth="4" strokeLinecap="round"/>
     </svg>
   )
 }

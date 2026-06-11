@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
 
 const dietPlans = [
@@ -20,22 +21,22 @@ const dietPlans = [
   {
     category: 'Medical Conditions',
     items: [
-      { name: 'Diabetes Management', icon: '🩺', description: 'Blood sugar control through diet planning', slug: 'diabetes' },
+      { name: 'Diabetes Management', icon: '🍬', description: 'Blood sugar control through diet planning', slug: 'diabetes' },
       { name: 'Hypertension', icon: '💓', description: 'Blood pressure management diet plans', slug: 'hypertension' },
-      { name: 'Cardiac Health', icon: '❤️', description: 'Heart-friendly diet for cardiovascular wellness', slug: 'cardiac-health' },
+      { name: 'Cardiac Health', icon: '🫀', description: 'Heart-friendly diet for cardiovascular wellness', slug: 'cardiac-health' },
       { name: 'Renal Disease', icon: '🫘', description: 'Kidney-friendly diet management', slug: 'renal-disease' },
-      { name: 'Fatty Liver', icon: '🫁', description: 'Liver health restoration through nutrition', slug: 'fatty-liver' },
+      { name: 'Fatty Liver', icon: '🩺', description: 'Liver health restoration through nutrition', slug: 'fatty-liver' },
       { name: 'Thyroid Disorders', icon: '🦋', description: 'Thyroid balancing diet plans', slug: 'thyroid-disorders' },
       { name: 'Cholesterol Management', icon: '🧬', description: 'Healthy cholesterol levels through diet', slug: 'cholesterol' },
-      { name: 'Hormonal Imbalance', icon: '⚖️', description: 'Balance hormones naturally through diet', slug: 'hormonal-imbalance' },
+      { name: 'Hormonal Imbalance', icon: '🔄', description: 'Balance hormones naturally through diet', slug: 'hormonal-imbalance' },
     ],
   },
   {
     category: 'Gastrointestinal',
     items: [
       { name: 'Acidity & GERD', icon: '🔥', description: 'Acid reflux management through diet', slug: 'acidity-gerd' },
-      { name: 'Constipation', icon: '🚽', description: 'Fibre-rich diet for healthy digestion', slug: 'constipation' },
-      { name: 'Bloating', icon: '🎈', description: 'Reduce bloating with proper nutrition', slug: 'bloating' },
+      { name: 'Constipation', icon: '🌿', description: 'Fibre-rich diet for healthy digestion', slug: 'constipation' },
+      { name: 'Bloating', icon: '🫧', description: 'Reduce bloating with proper nutrition', slug: 'bloating' },
     ],
   },
   {
@@ -47,37 +48,23 @@ const dietPlans = [
 ];
 
 export default function DietPlans() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.15 });
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
+  const allPlans = dietPlans.flatMap((cat) => cat.items);
 
   const scrollToContact = () => {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="services" className="py-20 gradient-bg">
+    <section id="services" ref={sectionRef} className="py-20 gradient-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -94,23 +81,18 @@ export default function DietPlans() {
         </motion.div>
 
         {/* Diet Plans Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {dietPlans.map((category, catIndex) =>
-            category.items.map((plan, planIndex) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {allPlans.map((plan, index) => (
               <motion.div
-                key={`${catIndex}-${planIndex}`}
-                variants={itemVariants}
+                key={plan.slug}
+                initial={{ opacity: 0, y: 24 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+                transition={{ duration: 0.4, delay: index * 0.04 }}
                 whileHover={{ scale: 1.03, y: -5 }}
                 className="glass-card p-6 rounded-2xl cursor-pointer group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-(--primary)/10 flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-(--primary)/10 flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
                     {plan.icon}
                   </div>
                   <div className="flex-1">
@@ -127,29 +109,30 @@ export default function DietPlans() {
                   {plan.slug ? (
                     <Link
                       href={`/services/${plan.slug}`}
-                      className="flex-1 py-2 text-sm font-medium text-center text-primary border border-(--primary)/30 rounded-lg hover:bg-primary hover:text-white transition-all duration-300"
+                      className="flex-1 py-2 text-sm font-medium text-center text-primary border border-(--primary)/30 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center justify-center gap-1.5"
                     >
-                      Learn More →
+                      Learn More
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                     </Link>
                   ) : (
                     <button
                       onClick={scrollToContact}
-                      className="flex-1 py-2 text-sm font-medium text-primary border border-(--primary)/30 rounded-lg hover:bg-primary hover:text-white transition-all duration-300"
+                      className="flex-1 py-2 text-sm font-medium text-primary border border-(--primary)/30 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center justify-center gap-1.5"
                     >
-                      Get Plan →
+                      Get Plan
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                     </button>
                   )}
                 </div>
               </motion.div>
-            ))
-          )}
-        </motion.div>
+            ))}
+        </div>
 
         {/* View All CTA */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ delay: 0.5 }}
           className="text-center mt-12"
         >

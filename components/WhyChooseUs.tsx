@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -120,7 +120,7 @@ export default function WhyChooseUs() {
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.15 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white text-sm ml-auto"
               >
@@ -134,7 +134,7 @@ export default function WhyChooseUs() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ delay: 0.3 }}
           className="mt-16"
         >

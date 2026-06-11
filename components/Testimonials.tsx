@@ -65,7 +65,7 @@ export default function Testimonials() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -159,7 +159,7 @@ export default function Testimonials() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ delay: 0.3 }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16"
         >
@@ -168,7 +168,7 @@ export default function Testimonials() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ delay: index * 0.1 }}
               className="glass-card p-6 rounded-2xl"
             >

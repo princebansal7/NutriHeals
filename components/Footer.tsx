@@ -1,6 +1,7 @@
 'use client';
 
 // import { motion } from 'framer-motion';
+import Link from 'next/link';
 import LogoIcon from './LogoIcon';
 import { WA_URL } from '@/lib/contact';
 
@@ -14,12 +15,12 @@ const quickLinks = [
 ];
 
 const services = [
-  'Weight Loss & Weight Gain',
-  'Diabetes Management',
-  'Hypertension',
-  'Cholesterol Management',
-  'Celiac Disease',
-  'Many more..',
+  { name: 'Weight Loss & Weight Gain', href: '/services/weight-loss' },
+  { name: 'Diabetes Management', href: '/services/diabetes' },
+  { name: 'Hypertension', href: '/services/hypertension' },
+  { name: 'Cholesterol Management', href: '/services/cholesterol' },
+  { name: 'Celiac Disease', href: '/services/celiac-disease' },
+  { name: 'Many more..', href: '/#services' },
 ];
 
 const WhatsAppIcon = ({ className = 'w-5 h-5' }: { className?: string }) => (
@@ -79,8 +80,10 @@ export default function Footer() {
             <h3 className="font-playfair font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
-                <li key={service}>
-                  <span className="text-white/70 text-sm">{service}</span>
+                <li key={service.name}>
+                  <Link href={service.href} className="text-white/70 hover:text-white transition-colors text-sm">
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -149,12 +152,12 @@ export default function Footer() {
               © {new Date().getFullYear()} NutriHeals. All rights reserved. | Dt. Yogita Bansal
             </p>
             <div className="flex gap-4 text-sm">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <Link href="/privacy-policy" className="text-white/60 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              </Link>
+              <Link href="/terms-conditions" className="text-white/60 hover:text-white transition-colors">
                 Terms & Conditions
-              </a>
+              </Link>
             </div>
           </div>
         </div>
