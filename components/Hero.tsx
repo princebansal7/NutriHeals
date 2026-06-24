@@ -107,7 +107,7 @@ export default function Hero() {
                 {/* shimmer sweep */}
                 <motion.span
                   aria-hidden
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -skew-x-12 pointer-events-none"
+                  className="absolute inset-0 bg-linear-to-r from-transparent via-primary/10 to-transparent -skew-x-12 pointer-events-none"
                   variants={{ rest: { x: '-160%' }, hovered: { x: '260%', transition: { duration: 0.75, ease: 'easeInOut' } } }}
                 />
                 <motion.span
@@ -133,7 +133,7 @@ export default function Hero() {
                 {/* shimmer sweep */}
                 <motion.span
                   aria-hidden
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -skew-x-12 pointer-events-none"
+                  className="absolute inset-0 bg-linear-to-r from-transparent via-primary/10 to-transparent -skew-x-12 pointer-events-none"
                   variants={{ rest: { x: '-160%' }, hovered: { x: '260%', transition: { duration: 0.75, ease: 'easeInOut' } } }}
                 />
                 <motion.span
@@ -207,7 +207,24 @@ export default function Hero() {
               <div className="w-px h-12 bg-(--text-muted)/30" />
               <div className="flex items-center gap-2">
                 <span className="text-3xl font-playfair font-bold text-primary">4.9</span>
-                <span className="text-sm text-text-muted">Rating<br />⭐⭐⭐⭐⭐</span>
+                <div>
+                  <span className="text-sm text-text-muted block mb-1">Rating</span>
+                  <div className="flex items-center gap-0.5">
+                    {[1,2,3,4,5].map((star) => {
+                      const fill = Math.min(1, Math.max(0, 4.9 - (star - 1)));
+                      const clipW = fill * 24;
+                      const id = `hero-star-${star}`;
+                      const path = "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z";
+                      return (
+                        <svg key={star} className="w-4 h-4" viewBox="0 0 24 24">
+                          <defs><clipPath id={id}><rect x="0" y="0" width={clipW} height="24" /></clipPath></defs>
+                          <path d={path} fill="rgba(45,90,61,0.15)" />
+                          <path d={path} fill="var(--primary)" clipPath={`url(#${id})`} />
+                        </svg>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -229,16 +246,33 @@ export default function Hero() {
                       <div className="w-28 h-28 rounded-full flex items-center justify-center bg-white/60 border border-primary/20">
                         <span className="font-playfair font-bold text-primary" style={{ fontSize: '2.4rem' }}>YB</span>
                       </div>
-                      <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/25" style={{ transform: 'scale(1.18)' }} />
+                      <motion.div
+                        initial={{ scale: 1.18, rotate: 0 }}
+                        animate={{ scale: 1.18, rotate: 360 }}
+                        transition={{ rotate: { duration: 35, repeat: Infinity, ease: 'linear' }, scale: { duration: 0 } }}
+                        className="absolute inset-0 rounded-full border-2 border-dashed border-primary/25"
+                      />
                     </div>
                     {/* Name — large & bold */}
                     <p className="font-playfair font-bold text-text-primary leading-tight mb-1" style={{ fontSize: 'clamp(1.7rem, 3.5vw, 2.4rem)' }}>
                       Dt. Yogita Bansal
                     </p>
                     {/* Title badge */}
-                    <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-6">
+                    <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-4">
                       Qualified Clinical Dietitian
                     </p>
+                    {/* Floating veggies */}
+                    <div className="flex justify-center gap-3 mb-5">
+                      {(['🥗', '🥑', '🫐', '🥦'] as const).map((emoji, i) => (
+                        <span
+                          key={i}
+                          className="text-2xl inline-block"
+                          style={{ animation: `float-gentle ${[2.1, 3.0, 2.6, 3.5][i]}s ease-in-out ${[0, 0.75, 1.4, 2.1][i]}s infinite` }}
+                        >
+                          {emoji}
+                        </span>
+                      ))}
+                    </div>
                     {/* Divider */}
                     <div className="w-10 h-px bg-primary/30 mx-auto mb-5" />
                     {/* Credentials */}
@@ -265,8 +299,10 @@ export default function Hero() {
                 className="absolute -top-6 -right-6 glass-card p-4 rounded-xl"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-xl">
-                    ✅
+                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
                   <div>
                     <p className="text-sm font-medium text-text-primary">100%</p>

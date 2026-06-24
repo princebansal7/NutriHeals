@@ -219,7 +219,11 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <button onClick={() => scrollToSection('#contact')} className="btn-primary">
+            <button
+              onClick={() => scrollToSection('#contact')}
+              className="btn-primary text-sm whitespace-nowrap"
+              style={{ padding: '0.55rem 1.25rem' }}
+            >
               Book Consultation
             </button>
           </div>

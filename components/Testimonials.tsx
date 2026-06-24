@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: 'Priya Sharma',
     location: 'Mohali',
-    rating: 5,
+    rating: 5.0,
     image: '👩',
     text: "Lost 15kg in 4 months with Dt. Yogita's guidance. The PMOS diet plan was a game changer!",
     result: '-15kg in 4 months',
@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: 'Ankit Mehra',
     location: 'Gurgaon',
-    rating: 5,
+    rating: 4.5,
     image: '👨',
     text: 'Best decision was to consult her for my diabetes. Blood sugar is now under control without medicines!',
     result: 'Sugar Normalized',
@@ -23,7 +23,7 @@ const testimonials = [
   {
     name: 'Riya Gupta',
     location: 'Chandigarh',
-    rating: 5,
+    rating: 5.0,
     image: '👩',
     text: 'Struggled with weight gain for years. Finally found a sustainable approach that actually works!',
     result: '-20kg Transformation',
@@ -31,7 +31,7 @@ const testimonials = [
   {
     name: 'Sanjay Patel',
     location: 'Faridabad',
-    rating: 5,
+    rating: 4.5,
     image: '👨',
     text: 'Thyroid levels are now normal! The customized diet plan was easy to follow and effective.',
     result: 'Thyroid Normalized',
@@ -39,12 +39,38 @@ const testimonials = [
   {
     name: 'Meera Kapoor',
     location: 'Delhi',
-    rating: 5,
+    rating: 5.0,
     image: '👩',
     text: 'Gut health improved dramatically. No more bloating or acidity issues after following the plan!',
     result: 'Digestion Fixed',
   },
 ];
+
+const STAR_PATH = "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z";
+
+function StarRating({ rating, size, uid }: { rating: number; size: 'sm' | 'lg'; uid: string }) {
+  const dim = size === 'lg' ? 'w-6 h-6' : 'w-3.5 h-3.5';
+  return (
+    <div className="flex items-center gap-0.5">
+      {[1, 2, 3, 4, 5].map((star) => {
+        const fill = Math.min(1, Math.max(0, rating - (star - 1)));
+        const clipW = fill * 24;
+        const id = `clip-${uid}-${star}`;
+        return (
+          <svg key={star} className={dim} viewBox="0 0 24 24">
+            <defs>
+              <clipPath id={id}>
+                <rect x="0" y="0" width={clipW} height="24" />
+              </clipPath>
+            </defs>
+            <path d={STAR_PATH} fill="rgba(45,90,61,0.15)" />
+            <path d={STAR_PATH} fill="var(--primary)" clipPath={`url(#${id})`} />
+          </svg>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
@@ -98,13 +124,10 @@ export default function Testimonials() {
                 className="glass-card p-8 sm:p-12 rounded-3xl"
               >
                 {/* Stars */}
-                <div className="flex justify-center mb-6">
-                  {[...Array(testimonials[current].rating)].map((_, i) => (
-                    <span key={i} className="text-2xl text-yellow-400">
-                      ⭐
-                    </span>
-                  ))}
+                <div className="flex justify-center mb-4">
+                  <StarRating rating={testimonials[current].rating} size="lg" uid={`carousel-${current}`} />
                 </div>
+                <p className="text-center text-xs text-text-muted mb-4 font-medium">{testimonials[current].rating.toFixed(1)} / 5</p>
 
                 {/* Quote */}
                 <blockquote className="text-center">
@@ -184,12 +207,9 @@ export default function Testimonials() {
                     {testimonial.location}
                   </p>
                 </div>
-                <div className="ml-auto flex">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-sm">
-                      ⭐
-                    </span>
-                  ))}
+                <div className="ml-auto flex flex-col items-end gap-0.5">
+                  <StarRating rating={testimonial.rating} size="sm" uid={`card-${index}`} />
+                  <span className="text-[10px] text-text-muted">{testimonial.rating.toFixed(1)}</span>
                 </div>
               </div>
               <p className="text-sm text-text-secondary line-clamp-2">

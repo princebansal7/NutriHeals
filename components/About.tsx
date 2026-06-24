@@ -4,10 +4,40 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   const certifications = [
-    { name: 'M.Sc. Dietetics & Nutrition', icon: '🎓' },
-    { name: 'Qualified Clinical Dietitian', icon: '🏥' },
-    { name: 'PMOS Specialist', icon: '💪' },
-    { name: '2.5+ Years Experience', icon: '⭐' },
+    {
+      name: 'M.Sc. Dietetics & Nutrition',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+          <path d="M6 12v5c3 3 9 3 12 0v-5" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Qualified Clinical Dietitian',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        </svg>
+      ),
+    },
+    {
+      name: 'PMOS Specialist',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+      ),
+    },
+    {
+      name: '2.5+ Years Experience',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="8" r="6" />
+          <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+        </svg>
+      ),
+    },
   ];
 
   const containerVariants = {
@@ -47,7 +77,7 @@ export default function About() {
                 <div className="w-full h-full flex flex-col justify-center bg-linear-to-br from-(--primary)/10 to-(--accent)/20 px-8 py-10">
                   {/* Compact profile header */}
                   <div className="flex items-center gap-4 mb-7">
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 bg-white/70 border border-primary/20">
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 bg-white/70 border border-primary/20">
                       <span className="font-playfair font-bold text-primary text-xl">YB</span>
                     </div>
                     <div>
@@ -111,7 +141,9 @@ export default function About() {
                   whileHover={{ scale: 1.02 }}
                   className="glass-card p-4 rounded-xl flex items-center gap-3"
                 >
-                  <span className="text-2xl">{cert.icon}</span>
+                  <div className="w-9 h-9 rounded-lg bg-green-50 text-primary flex items-center justify-center shrink-0">
+                    {cert.icon}
+                  </div>
                   <span className="text-sm font-medium text-text-primary">
                     {cert.name}
                   </span>
