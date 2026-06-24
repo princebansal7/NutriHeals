@@ -16,11 +16,56 @@ const navLinks = [
 ];
 
 const toolsLinks = [
-  { name: 'BMI Calculator', href: '/tools/bmi', icon: '📊', available: true },
-  { name: 'Protein Calculator', href: '/tools/protein', icon: '🥩', available: true },
-  { name: 'Daily Calorie', href: '/tools/calorie', icon: '🔥', available: true },
-  { name: 'Ideal Weight', href: '/tools/ideal-weight', icon: '⚖️', available: true },
+  { name: 'BMI Calculator', href: '/tools/bmi', available: true },
+  { name: 'Protein Calculator', href: '/tools/protein', available: true },
+  { name: 'Daily Calorie', href: '/tools/calorie', available: true },
+  { name: 'Ideal Weight', href: '/tools/ideal-weight', available: true },
 ];
+
+function CalcIcon({ href }: { href: string }) {
+  const p = {
+    viewBox: '0 0 24 24' as const,
+    fill: 'none' as const,
+    stroke: 'currentColor' as const,
+    strokeWidth: '1.75',
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    className: 'w-[17px] h-[17px]',
+  };
+  if (href === '/tools/bmi') return (
+    // Speedometer / gauge
+    <svg {...p}>
+      <path d="M5 16a7 7 0 1 1 14 0" />
+      <path d="M5 16h14" />
+      <path d="M12 16l-3.5-6" />
+      <circle cx="12" cy="16" r="1.25" fill="currentColor" stroke="none" />
+    </svg>
+  );
+  if (href === '/tools/protein') return (
+    // Dumbbell
+    <svg {...p}>
+      <path d="M6.5 8v8" />
+      <path d="M17.5 8v8" />
+      <path d="M4.5 10v4" />
+      <path d="M19.5 10v4" />
+      <path d="M6.5 12h11" />
+    </svg>
+  );
+  if (href === '/tools/calorie') return (
+    // Flame
+    <svg {...p}>
+      <path d="M12 22c3.5 0 6-2.7 6-6.5 0-3.5-2.5-6-4-7.5-.5 2-1.5 3-1.5 3S12 9 10.5 6c0 3-1.5 4.5-1.5 7 0 0-1.5-.5-1.5-2.5C7 15 8 22 12 22z" />
+    </svg>
+  );
+  // ideal-weight — bullseye / target
+  return (
+    <svg {...p}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -154,7 +199,9 @@ export default function Navbar() {
                               : 'text-gray-400 cursor-not-allowed opacity-60'
                             }`}
                         >
-                          <span className="text-base">{tool.icon}</span>
+                          <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${pathname === tool.href ? 'bg-primary text-white' : 'bg-green-50 text-primary'}`}>
+                            <CalcIcon href={tool.href} />
+                          </div>
                           <span className="flex-1 font-medium">{tool.name}</span>
                           {!tool.available && (
                             <span className="text-[10px] font-semibold bg-gray-100 text-gray-400 px-1.5 py-0.5 rounded-full">
@@ -256,7 +303,9 @@ export default function Navbar() {
                                 : 'text-text-muted opacity-60 cursor-not-allowed'
                               }`}
                           >
-                            <span>{tool.icon}</span>
+                            <div className="w-6 h-6 rounded-md flex items-center justify-center shrink-0 bg-green-50 text-primary">
+                              <CalcIcon href={tool.href} />
+                            </div>
                             <span className="flex-1">{tool.name}</span>
                             {!tool.available && (
                               <span className="text-[10px] bg-gray-100 px-1.5 py-0.5 rounded-full">Soon</span>

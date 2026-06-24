@@ -7,7 +7,7 @@ export default function About() {
     { name: 'M.Sc. Dietetics & Nutrition', icon: '🎓' },
     { name: 'Qualified Clinical Dietitian', icon: '🏥' },
     { name: 'PMOS Specialist', icon: '💪' },
-    { name: '1.5+ Years Experience', icon: '⭐' },
+    { name: '2.5+ Years Experience', icon: '⭐' },
   ];
 
   const containerVariants = {
@@ -44,18 +44,31 @@ export default function About() {
             <div className="relative">
               {/* Main Image Placeholder */}
               <div className="w-full h-125 rounded-3xl overflow-hidden glass-card">
-                <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-(--primary)/10 to-(--accent)/20">
-                  <div className="text-center">
-                    <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-(--primary)/20 flex items-center justify-center">
-                      <span className="text-7xl">👩‍⚕️</span>
+                <div className="w-full h-full flex flex-col justify-center bg-linear-to-br from-(--primary)/10 to-(--accent)/20 px-8 py-10">
+                  {/* Compact profile header */}
+                  <div className="flex items-center gap-4 mb-7">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 bg-white/70 border border-primary/20">
+                      <span className="font-playfair font-bold text-primary text-xl">YB</span>
                     </div>
-                    <p className="text-text-secondary font-playfair text-xl">
-                      Dt. Yogita Bansal
-                    </p>
-                    <p className="text-text-muted mt-2">
-                      Qualified Clinical Dietitian
-                    </p>
+                    <div>
+                      <p className="font-playfair font-bold text-text-primary text-xl leading-tight">Dt. Yogita Bansal</p>
+                      <p className="text-primary text-[11px] font-semibold uppercase tracking-wider mt-0.5">Clinical Dietitian</p>
+                    </div>
                   </div>
+                  {/* Credentials list */}
+                  {[
+                    { label: 'Qualification', value: 'M.Sc. Dietetics & Nutrition' },
+                    { label: 'Speciality', value: 'Clinical & Therapeutic Nutrition' },
+                    { label: 'Experience', value: '2.5+ Years of Practice' },
+                    { label: 'Location', value: 'Chandigarh, India' },
+                    { label: 'Clients', value: '500+ Lives Transformed' },
+                    { label: 'Approach', value: 'Evidence-Based & Personalised' },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-start gap-3 border-b border-primary/10 py-2.5 last:border-0">
+                      <p className="text-xs text-text-muted w-24 shrink-0 pt-0.5">{item.label}</p>
+                      <p className="text-sm text-text-primary font-medium">{item.value}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
 

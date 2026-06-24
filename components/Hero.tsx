@@ -92,13 +92,58 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             <motion.div variants={itemVariants} className="mb-4 flex flex-wrap gap-2 justify-center lg:justify-start">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-(--surface)/80 rounded-full text-sm text-primary font-medium shadow-sm">
-                <span className="w-2 h-2 bg-primary rounded-full animate-pulse-gentle" />
-                Clinical Dietitian
-              </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-(--primary)/10 rounded-full text-sm text-primary font-medium">
-                📍 Chandigarh
-              </span>
+              {/* Clinical Dietitian badge */}
+              <motion.span
+                whileHover="hovered"
+                initial="rest"
+                animate="rest"
+                variants={{
+                  rest: { y: 0, boxShadow: '0 1px 4px rgba(0,0,0,0.08)' },
+                  hovered: { y: -4, boxShadow: '0 8px 22px rgba(45,90,61,0.18)' },
+                }}
+                transition={{ duration: 0.45, ease: 'easeOut' }}
+                className="relative inline-flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full text-sm text-primary font-medium cursor-default select-none overflow-hidden"
+              >
+                {/* shimmer sweep */}
+                <motion.span
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -skew-x-12 pointer-events-none"
+                  variants={{ rest: { x: '-160%' }, hovered: { x: '260%', transition: { duration: 0.75, ease: 'easeInOut' } } }}
+                />
+                <motion.span
+                  variants={{ rest: { scale: 1 }, hovered: { scale: 1.4 } }}
+                  transition={{ duration: 0.4 }}
+                  className="relative z-10 w-2 h-2 bg-primary rounded-full animate-pulse-gentle"
+                />
+                <span className="relative z-10">Clinical Dietitian</span>
+              </motion.span>
+
+              {/* Chandigarh badge */}
+              <motion.span
+                whileHover="hovered"
+                initial="rest"
+                animate="rest"
+                variants={{
+                  rest: { y: 0, boxShadow: '0 0px 0px rgba(45,90,61,0)' },
+                  hovered: { y: -4, boxShadow: '0 8px 22px rgba(45,90,61,0.18)' },
+                }}
+                transition={{ duration: 0.45, ease: 'easeOut' }}
+                className="relative inline-flex items-center gap-2 px-4 py-2 bg-(--primary)/10 rounded-full text-sm text-primary font-medium cursor-default select-none overflow-hidden"
+              >
+                {/* shimmer sweep */}
+                <motion.span
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -skew-x-12 pointer-events-none"
+                  variants={{ rest: { x: '-160%' }, hovered: { x: '260%', transition: { duration: 0.75, ease: 'easeInOut' } } }}
+                />
+                <motion.span
+                  variants={{ rest: { y: 0 }, hovered: { y: [0, -5, 1, 0], transition: { duration: 0.55, times: [0, 0.35, 0.75, 1] } } }}
+                  className="relative z-10 leading-none"
+                >
+                  📍
+                </motion.span>
+                <span className="relative z-10">Chandigarh</span>
+              </motion.span>
             </motion.div>
 
             <motion.h1
@@ -124,13 +169,13 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollToSection('#contact')}
-                className="btn-primary text-lg px-8 py-4"
+                className="btn-primary whitespace-nowrap"
               >
                 Book Consultation
               </button>
               <button
                 onClick={() => scrollToSection('#services')}
-                className="btn-secondary text-lg px-8 py-4"
+                className="btn-secondary whitespace-nowrap"
               >
                 View Diet Plans
               </button>
@@ -138,7 +183,7 @@ export default function Hero() {
                 href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="whatsapp-btn text-lg px-8 py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-all duration-300"
+                className="whatsapp-btn whitespace-nowrap"
               >
                 {WHATSAPP_SVG}
                 WhatsApp
@@ -151,7 +196,7 @@ export default function Hero() {
               className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-6"
             >
               <div className="flex items-center gap-2">
-                <span className="text-3xl font-playfair font-bold text-primary">1.5+</span>
+                <span className="text-3xl font-playfair font-bold text-primary">2.5+</span>
                 <span className="text-sm text-text-muted">Years<br />Experience</span>
               </div>
               <div className="w-px h-12 bg-(--text-muted)/30" />
@@ -177,20 +222,36 @@ export default function Hero() {
             <div className="relative">
               {/* Main Visual */}
               <div className="w-full h-125 rounded-3xl overflow-hidden glass-card">
-                <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-(--gradient-start) to-(--gradient-end)">
-                  <div className="text-center">
-                    <div className="w-36 h-36 mx-auto mb-6 rounded-full bg-(--primary)/15 flex items-center justify-center">
-                      <span className="text-8xl">👩‍⚕️</span>
+                <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-(--gradient-start) to-(--gradient-end) px-8">
+                  <div className="text-center w-full">
+                    {/* Monogram */}
+                    <div className="relative w-28 h-28 mx-auto mb-7">
+                      <div className="w-28 h-28 rounded-full flex items-center justify-center bg-white/60 border border-primary/20">
+                        <span className="font-playfair font-bold text-primary" style={{ fontSize: '2.4rem' }}>YB</span>
+                      </div>
+                      <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/25" style={{ transform: 'scale(1.18)' }} />
                     </div>
-                    <p className="text-text-primary font-playfair text-2xl font-semibold">
+                    {/* Name — large & bold */}
+                    <p className="font-playfair font-bold text-text-primary leading-tight mb-1" style={{ fontSize: 'clamp(1.7rem, 3.5vw, 2.4rem)' }}>
                       Dt. Yogita Bansal
                     </p>
-                    <p className="text-text-secondary mt-1 text-base">
+                    {/* Title badge */}
+                    <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-6">
                       Qualified Clinical Dietitian
                     </p>
-                    <div className="flex justify-center gap-2 mt-4">
-                      {['🥗', '🥑', '🫐', '🥦'].map((emoji, i) => (
-                        <span key={i} className="text-2xl">{emoji}</span>
+                    {/* Divider */}
+                    <div className="w-10 h-px bg-primary/30 mx-auto mb-5" />
+                    {/* Credentials */}
+                    <div className="space-y-2">
+                      {[
+                        'M.Sc. Dietetics & Nutrition',
+                        'Clinical Nutrition Specialist',
+                        '2.5+ Years of Practice',
+                      ].map((c) => (
+                        <p key={c} className="flex items-center justify-center gap-2 text-text-secondary text-sm">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0" />
+                          {c}
+                        </p>
                       ))}
                     </div>
                   </div>

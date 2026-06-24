@@ -49,12 +49,12 @@ export default function FinalCTA() {
             Book a consultation with Dt. Yogita Bansal and get a personalized nutrition plan tailored to your health goals.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="px-8 py-4 bg-white text-primary rounded-full font-semibold text-lg hover:shadow-xl transition-all"
+              className="w-full sm:w-auto px-6 py-3 bg-white text-primary rounded-full font-semibold hover:shadow-xl transition-all whitespace-nowrap"
             >
               Book Appointment
             </motion.button>
@@ -62,7 +62,7 @@ export default function FinalCTA() {
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="whatsapp-btn px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center gap-2 transition-all duration-300"
+              className="whatsapp-btn w-full sm:w-auto whitespace-nowrap"
             >
               <WhatsAppIcon />
               WhatsApp Now
@@ -71,7 +71,7 @@ export default function FinalCTA() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToContact}
-              className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold text-lg hover:bg-white/10 transition-all"
+              className="w-full sm:w-auto px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all whitespace-nowrap"
             >
               Get Diet Plan
             </motion.button>
